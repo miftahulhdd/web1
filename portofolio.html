@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>miftahulhdd - portofolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+      <div id="devToast" class="custom-toast">
+        🚧 This site is still a work in progress :)
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container-fluid px-3 px-lg-5">
+        <a class="navbar-brand fw-semibold" href="#">miftahulhdd</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto fw-semibold me-lg-3">
+            <a class="nav-link mx-1" href="index.html">Home</a>
+            <a class="nav-link mx-1" href="portofolio.html">Portfolio</a>
+            <a class="nav-link mx-1" href="about.html">About</a>
+            <a class="nav-link mx-1" href="kontak.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- portfolio start -->
+    <section id="portfolio" class="portofolio-section py-4 py-md-5">
+      <div class="container px-3">
+        <h2 class="text-center fw-semibold mb-3">Portfolio</h2>
+        <p class="text-center text-muted mb-4">
+          A showcase of my projects and creative works.
+        </p>
+
+        <!-- filter tabs -->
+        <ul
+          class="nav nav-pills justify-content-center mb-4 flex-wrap gap-1"
+          id="portfolioTabs"
+        >
+          <li class="nav-item">
+            <button
+              class="nav-link active rounded-pill"
+              data-bs-toggle="tab"
+              data-category="all"
+            >
+              All
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link rounded-pill"
+              data-bs-toggle="tab"
+              data-category="design"
+            >
+              Design
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link rounded-pill"
+              data-bs-toggle="tab"
+              data-category="web"
+            >
+              Web
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link rounded-pill"
+              data-bs-toggle="tab"
+              data-category="photo"
+            >
+              Photography
+            </button>
+          </li>
+        </ul>
+
+        <!-- portfolio grid: 2 kolom di mobile, 3 di desktop -->
+        <div class="row g-3" id="portfolioGrid">
+          <!-- g1 -->
+          <div class="col-6 col-md-4 portfolio-item" data-category="design">
+            <div
+              class="card h-100 portfolio-card"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal1"
+            >
+              <img
+                src="assets/portfolio-1.jpg"
+                class="card-img-top"
+                style="height: 160px; object-fit: cover"
+                alt="Project 1"
+              />
+              <div class="card-body p-2 p-md-3">
+                <h5 class="card-title">Branding Design</h5>
+                <p class="card-text text-muted d-none d-md-block">
+                  Designing visual identities for digital experiences.
+                </p>
+                <span class="badge bg-primary">Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- g2 -->
+          <div class="col-6 col-md-4 portfolio-item" data-category="web">
+            <div
+              class="card h-100 portfolio-card"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal2"
+            >
+              <img
+                src="assets/portfolio-2.jpg"
+                class="card-img-top"
+                style="height: 160px; object-fit: cover"
+                alt="Project 2"
+              />
+              <div class="card-body p-2 p-md-3">
+                <h5 class="card-title">Company Website</h5>
+                <p class="card-text text-muted d-none d-md-block">
+                  Designing professional and responsive websites for businesses.
+                </p>
+                <span class="badge bg-success">Web</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- g3 -->
+          <div class="col-6 col-md-4 portfolio-item" data-category="photo">
+            <div
+              class="card h-100 portfolio-card"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal3"
+            >
+              <img
+                src="assets/portfolio-5.jpg"
+                class="card-img-top"
+                style="height: 160px; object-fit: cover"
+                alt="Project 3"
+              />
+              <div class="card-body p-2 p-md-3">
+                <h5 class="card-title">Event Photography</h5>
+                <p class="card-text text-muted d-none d-md-block">
+                  Corporate and campus event photography documentation.
+                </p>
+                <span class="badge bg-warning text-dark">Photography</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- g4 -->
+          <div class="col-6 col-md-4 portfolio-item" data-category="web">
+            <div
+              class="card h-100 portfolio-card"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal4"
+            >
+              <img
+                src="assets/portfolio-3.jpg"
+                class="card-img-top"
+                style="height: 160px; object-fit: cover"
+                alt="Project 4"
+              />
+              <div class="card-body p-2 p-md-3">
+                <h5 class="card-title">Landing Page</h5>
+                <p class="card-text text-muted d-none d-md-block">
+                  Modern and responsive landing page.
+                </p>
+                <span class="badge bg-success">Web</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- g5 -->
+          <div class="col-6 col-md-4 portfolio-item" data-category="design">
+            <div
+              class="card h-100 portfolio-card"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal5"
+            >
+              <img
+                src="assets/portfolio-4.jpg"
+                class="card-img-top"
+                style="height: 160px; object-fit: cover"
+                alt="Project 5"
+              />
+              <div class="card-body p-2 p-md-3">
+                <h5 class="card-title">UI/UX App</h5>
+                <p class="card-text text-muted d-none d-md-block">
+                  Designing intuitive user interfaces and experiences for mobile
+                  applications.
+                </p>
+                <span class="badge bg-primary">Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- g6 -->
+          <div class="col-6 col-md-4 portfolio-item" data-category="photo">
+            <div
+              class="card h-100 portfolio-card"
+              data-bs-toggle="modal"
+              data-bs-target="#portfolioModal6"
+            >
+              <img
+                src="assets/portfolio-6.jpg"
+                class="card-img-top"
+                style="height: 160px; object-fit: cover"
+                alt="Project 6"
+              />
+              <div class="card-body p-2 p-md-3">
+                <h5 class="card-title">Outdoor Photoshoot</h5>
+                <p class="card-text text-muted d-none d-md-block">
+                  Outdoor photography sessions for various purposes.
+                </p>
+                <span class="badge bg-warning text-dark">Photography</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal 1 -->
+    <div
+      class="modal fade"
+      id="portfolioModal1"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Branding Design</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselModal1" class="carousel slide mb-3">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="assets/portfolio-1.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/portfolio-4.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselModal1"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselModal1"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <p>
+              Comprehensive branding design for digital products, including
+              visual identity and brand guidelines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div
+      class="modal fade"
+      id="portfolioModal2"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Company Website</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselModal2" class="carousel slide mb-3">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="assets/portfolio-2.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/portfolio-3.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselModal2"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselModal2"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <p>
+              Modern and professional company profile website with a clean and
+              responsive design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div
+      class="modal fade"
+      id="portfolioModal3"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Event Photography</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselModal3" class="carousel slide mb-3">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="assets/portfolio-5.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/portfolio-6.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselModal3"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselModal3"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <p>
+              Professional photography documentation for various events such as
+              conferences, seminars, and business meetings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div
+      class="modal fade"
+      id="portfolioModal4"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Landing Page</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselModal4" class="carousel slide mb-3">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="assets/portfolio-3.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/portfolio-2.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselModal4"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselModal4"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <p>
+              Modern and responsive landing page designed with a focus on
+              conversion and optimal user experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div
+      class="modal fade"
+      id="portfolioModal5"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">UI/UX App</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselModal5" class="carousel slide mb-3">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="assets/portfolio-4.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/portfolio-1.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselModal5"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselModal5"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <p>
+              Intuitive mobile application UI/UX design with comprehensive
+              research and continuous design iteration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div
+      class="modal fade"
+      id="portfolioModal6"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Outdoor Photography</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselModal6" class="carousel slide mb-3">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="assets/portfolio-5.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="assets/portfolio-6.jpg"
+                    class="d-block w-100 rounded"
+                    style="max-height: 300px; object-fit: cover"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselModal6"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselModal6"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <p>
+              Outdoor photography sessions for various purposes, including
+              landscapes, architecture, and portrait photography.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- portfolio end -->
+
+    <!-- footer start -->
+    <footer class="footer-section py-5 text-center">
+      <div class="container px-3">
+        <h5 class="fw-semibold text-dark mb-2">Miftahul Huda Amri</h5>
+        <div class="mb-2">
+          <a
+            href="https://github.com/miftahulhdd"
+            target="_blank"
+            class="text-dark text-decoration-none mx-2"
+            style="font-size: 20px"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href=""
+            class="text-dark text-decoration-none mx-2"
+            style="font-size: 20px"
+          >
+            <i class="bi bi-envelope"></i>
+          </a>
+          <a
+            href="https://instagram.com/miftahulhdd"
+            target="_blank"
+            class="text-dark text-decoration-none mx-2"
+            style="font-size: 20px"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-muted mb-3" style="max-width: 600px; margin: 0 auto">
+          For business inquiry, feel free to reach out via email or Instagram
+          DM.
+        </p>
+        <ul class="list-unstyled text-muted small mb-3">
+          <li class="mb-2"><strong>Address:</strong> Padang, Sumatera Barat</li>
+          <li class="mb-2">
+            <strong>Email:</strong> miftahulhudaamri@example.com
+          </li>
+          <li class="mb-2"><strong>Phone:</strong> +62 852-1111-1111</li>
+        </ul>
+        <hr class="my-4" />
+        <div class="text-muted small">
+          &copy; 2026 miftahulhdd. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

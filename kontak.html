@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>miftahulhdd - contact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body-contact">
+    
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+      <div id="devToast" class="custom-toast">
+        🚧 This site is still a work in progress :)
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container-fluid px-3 px-lg-5">
+        <a class="navbar-brand fw-semibold" href="#">miftahulhdd</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto fw-semibold me-lg-3">
+            <a class="nav-link mx-1" href="index.html">Home</a>
+            <a class="nav-link mx-1" href="portofolio.html">Portfolio</a>
+            <a class="nav-link mx-1" href="about.html">About</a>
+            <a class="nav-link mx-1" href="kontak.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- start form and contact -->
+    <section id="contact" class="p-3 p-md-5">
+      <div class="container">
+        <h2 class="text-center fw-semibold mb-3">Contact Me</h2>
+        <p class="text-center text-muted mb-4">
+          Get in touch for collaboration or inquiries.
+        </p>
+        <div class="row bg-light rounded-4 p-2 p-md-3 shadow-sm">
+          <!-- form -->
+          <div class="col-12 col-lg-7">
+            <div class="p-3 p-lg-5">
+              <!-- alerts -->
+              <div
+                id="alertSuccess"
+                class="alert alert-success d-none"
+                role="alert"
+              >
+                Your message has been sent successfully!
+              </div>
+              <div
+                id="alertError"
+                class="alert alert-danger d-none"
+                role="alert"
+              >
+                Something went wrong. Please try again.
+              </div>
+              <div
+                id="alertWarning"
+                class="alert alert-warning d-none"
+                role="alert"
+              >
+                Please double-check your input.
+              </div>
+
+              <form id="contactForm">
+                <!-- nama -->
+                <div class="mb-3">
+                  <label class="form-label"
+                    >Name <span class="text-danger">*</span></label
+                  >
+                  <input type="text" class="form-control" id="name" required />
+                  <div class="invalid-feedback">Name is required.</div>
+                </div>
+                <!-- email -->
+                <div class="mb-3">
+                  <label class="form-label"
+                    >Email <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Enter a valid email address.
+                  </div>
+                </div>
+                <!-- nohp -->
+                <div class="mb-3">
+                  <label class="form-label"
+                    >Phone <span class="text-danger">*</span></label
+                  >
+                  <input type="tel" class="form-control" id="phone" required />
+                  <div class="invalid-feedback">Phone number is required.</div>
+                </div>
+                <!-- subject -->
+                <div class="mb-3">
+                  <label class="form-label"
+                    >Subject <span class="text-danger">*</span></label
+                  >
+                  <select id="subject" class="form-select" required>
+                    <option value="" selected disabled>Select subject..</option>
+                    <option>Project Inquiry</option>
+                    <option>Collaboration</option>
+                    <option>Support</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose a subject.</div>
+                </div>
+                <!-- message -->
+                <div class="mb-3">
+                  <label class="form-label"
+                    >Message <span class="text-danger">*</span></label
+                  >
+                  <textarea
+                    id="message"
+                    class="form-control"
+                    rows="4"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Message cannot be empty.</div>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="agree"
+                    required
+                  />
+                  <label class="form-check-label" for="agree">
+                    I agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+
+                <button
+                  id="submitBtn"
+                  class="btn btn-primary rounded-4 w-100 mb-2"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- form end -->
+
+          <!-- info dan map -->
+          <div class="col-12 col-lg-5">
+            <div class="p-3 p-lg-5">
+              <h5 class="fw-semibold mb-3">Contact Information</h5>
+              <p class="mb-1"><strong>Address:</strong></p>
+              <p class="text-muted">Padang, Sumatera Barat</p>
+              <p class="mb-1"><strong>Phone:</strong></p>
+              <p class="text-muted">+62 852-1111-1111</p>
+              <p class="mb-1"><strong>Email:</strong></p>
+              <p class="text-muted">miftahulhudaamri@example.com</p>
+              <p class="mb-1"><strong>Follow Me on:</strong></p>
+              <div class="mb-3">
+                <a
+                  href="https://github.com/miftahulhdd"
+                  target="_blank"
+                  class="text-dark text-decoration-none mx-1"
+                  style="font-size: 22px"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
+                <a
+                  href=""
+                  class="text-dark text-decoration-none mx-1"
+                  style="font-size: 22px"
+                >
+                  <i class="bi bi-envelope"></i>
+                </a>
+                <a
+                  href="https://instagram.com/miftahulhdd"
+                  target="_blank"
+                  class="text-dark text-decoration-none mx-1"
+                  style="font-size: 22px"
+                >
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </div>
+
+              <!-- maps embed -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.08594129031!2d100.36350379349506!3d-0.9486241802870921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b942e2b117bb%3A0xb8468cb5c3046ba5!2sPadang%2C%20Kota%20Padang%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1765456318721!5m2!1sid!2sid"
+                width="100%"
+                height="220"
+                style="border: 0"
+                loading="lazy"
+                class="shadow-sm rounded-3"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <!-- info dan map end -->
+        </div>
+      </div>
+    </section>
+    <!-- end form and contact -->
+
+    <!-- footer -->
+    <footer class="contactfooter-section py-4 text-center">
+      <div class="container px-3">
+        <hr class="my-3" />
+        <div class="text-muted small">
+          &copy; 2026 miftahulhdd. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

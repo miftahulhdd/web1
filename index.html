@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>miftahulhdd - home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+      <div id="devToast" class="custom-toast">
+        🚧 This site is still a work in progress :)
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container-fluid px-3 px-lg-5">
+        <a class="navbar-brand fw-semibold" href="#">miftahulhdd</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto fw-semibold me-lg-3">
+            <a class="nav-link mx-1" href="index.html">Home</a>
+            <a class="nav-link mx-1" href="portofolio.html">Portfolio</a>
+            <a class="nav-link mx-1" href="about.html">About</a>
+            <a class="nav-link mx-1" href="kontak.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- start hero -->
+    <section class="hero-section d-flex align-items-center">
+      <div class="container px-3">
+        <div class="row align-items-center">
+          <!-- foto: tampil di atas di mobile (order-1), kanan di desktop -->
+          <div
+            class="col-lg-4 offset-lg-2 col-12 text-center order-1 order-lg-2 pt-5 pt-lg-0 pb-3 pb-lg-5"
+          >
+            <img
+              src="assets/huda-hero.png"
+              class="hero-image img-fluid rounded-4 shadow-sm"
+              alt="Foto Huda"
+            />
+          </div>
+          <!-- teks: tampil di bawah di mobile (order-2), kiri di desktop -->
+          <div
+            class="col-lg-6 text-white text-center text-lg-start order-2 order-lg-1 pb-5"
+          >
+            <h1 class="display-4 display-lg-3 fw-semibold mb-3">
+              Hi, I'm Huda
+            </h1>
+            <p class="lead mb-4 fs-6 fs-md-5 fs-lg-4">
+              <strong>Web Development & Design Enthusiast</strong><br />
+              Informatics Student at <strong>Universitas Andalas</strong> |
+              Class of 2024
+            </p>
+            <div
+              class="d-flex gap-2 justify-content-center justify-content-lg-start flex-wrap"
+            >
+              <a
+                href="portofolio.html"
+                class="btn btn-light btn-md px-4 rounded-3"
+                >Explore Project</a
+              >
+              <a
+                href="kontak.html"
+                class="btn btn-outline-light btn-md px-4 rounded-3"
+                >Get in Touch</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end hero -->
+
+    <!-- skill start -->
+    <section class="skills-section py-5">
+      <div class="container px-3 text-center">
+        <h2 class="fw-semibold mb-3">My Skills</h2>
+        <p class="text-muted mb-4">
+          Services I provide to help with your digital needs.
+        </p>
+        <div class="row g-3 justify-content-center">
+          <!-- card1 -->
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="feature-card p-4 text-center">
+              <i class="bi bi-code-slash fs-3 mb-3"></i>
+              <h5 class="fw-semibold">Web Development</h5>
+            </div>
+          </div>
+          <!-- card2 -->
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="feature-card p-4 text-center">
+              <i class="bi bi-camera fs-3 mb-3"></i>
+              <h5 class="fw-semibold">Photography</h5>
+            </div>
+          </div>
+          <!-- card3 -->
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="feature-card p-4 text-center">
+              <i class="bi bi-vector-pen fs-3 mb-3"></i>
+              <h5 class="fw-semibold">Graphic Design</h5>
+            </div>
+          </div>
+          <!-- card4 -->
+          <div class="col-6 col-md-6 col-lg-3">
+            <div class="feature-card p-4 text-center">
+              <i class="bi bi-bootstrap fs-3 mb-3"></i>
+              <h5 class="fw-semibold">Bootstrap Framework</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skills end -->
+
+    <!-- gallery start -->
+    <section class="gallery-section py-4">
+      <div class="container px-3">
+        <h2 class="text-center fw-semibold mb-3">Gallery</h2>
+        <p class="text-center text-muted mb-4">
+          My works, projects, and learning journey.
+        </p>
+        <div
+          id="carouselGallery"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselGallery"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselGallery"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselGallery"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner rounded-4 shadow-sm">
+            <div class="carousel-item active">
+              <img
+                src="assets/gallery-1.jpg"
+                class="d-block w-100"
+                style="max-height: 420px; object-fit: cover"
+                alt="Scenery"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/gallery-2.jpg"
+                class="d-block w-100"
+                style="max-height: 420px; object-fit: cover"
+                alt="LKMM-TD FTI 25"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/gallery-3.JPG"
+                class="d-block w-100"
+                style="max-height: 420px; object-fit: cover"
+                alt="Unand"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselGallery"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselGallery"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- gallery end -->
+
+    <!-- footer start -->
+    <footer class="footer-section py-5 text-center">
+      <div class="container px-3">
+        <h5 class="fw-semibold text-dark mb-2">Miftahul Huda Amri</h5>
+        <div class="mb-2">
+          <a
+            href="https://github.com/miftahulhdd"
+            target="_blank"
+            class="text-dark text-decoration-none mx-2"
+            style="font-size: 20px"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href=""
+            class="text-dark text-decoration-none mx-2"
+            style="font-size: 20px"
+          >
+            <i class="bi bi-envelope"></i>
+          </a>
+          <a
+            href="https://instagram.com/miftahulhdd"
+            target="_blank"
+            class="text-dark text-decoration-none mx-2"
+            style="font-size: 20px"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-muted mb-3" style="max-width: 600px; margin: 0 auto">
+          For business inquiry, feel free to reach out via email or Instagram
+          DM.
+        </p>
+        <ul class="list-unstyled text-muted small mb-3">
+          <li class="mb-2"><strong>Address:</strong> Padang, Sumatera Barat</li>
+          <li class="mb-2">
+            <strong>Email:</strong> miftahulhudaamri@example.com
+          </li>
+          <li class="mb-2"><strong>Phone:</strong> +62 852-1111-1111</li>
+        </ul>
+        <hr class="my-4" />
+        <div class="text-muted small">
+          &copy; 2026 miftahulhdd. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
