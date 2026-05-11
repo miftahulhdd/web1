@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>miftahulhdd - about</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style-laporan.css" />
+  </head>
+  <body>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+      <div id="devToast" class="custom-toast">
+        🚧 This site is still a work in progress :)
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container-fluid px-3 px-lg-5 d-flex justify-content-between align-items-center">
+        <a class="navbar-brand fw-semibold" href="#">miftahulhdd</a>
+        
+        
+        <div class="d-none d-md-block mx-auto">
+          <span class="text-muted fw-medium text-uppercase small tracking-widest">Laboratory Report</span>
+        </div>
+
+        <div class="navbar-nav ms-auto ms-md-0 fw-semibold">
+          <a class="nav-link mx-1" href="../index.html">Home</a>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- main content start -->
+    <main class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-11">
+          
+          <div class="report-container">
+            <!-- back button -->
+            <a href="../portofolio.html" class="back-btn">
+              <i class="bi bi-arrow-left"></i> Kembali ke Portofolio
+            </a>
+
+            <!-- badge -->
+            <div class="mb-2">
+              <span class="course-badge">Pemrograman Web</span>
+            </div>
+
+            <!-- date -->
+            <div class="publish-date">
+              Published on: 11 Mei 2026
+            </div>
+
+            <!-- title -->
+            <h1 class="article-title">Laporan Praktikum 7: Integrasi Bootstrap dan CSS Custom</h1>
+
+            <!-- pendahuluan -->
+            <section>
+              <h2 class="section-title">Pendahuluan</h2>
+              <p class="intro-text">
+                Praktikum kali ini berfokus pada bagaimana mengintegrasikan framework Bootstrap dengan CSS custom untuk menciptakan tampilan yang unik dan profesional. Kita akan mempelajari cara menimpa style bawaan Bootstrap serta cara mengorganisir file CSS agar tetap rapi dan mudah dikelola.
+              </p>
+              
+              <div class="list-group list-group-custom">
+                <div class="list-group-item">
+                  <strong>Bootstrap:</strong> Framework CSS paling populer untuk membangun situs responsif dan mobile-first.
+                </div>
+                <div class="list-group-item">
+                  <strong>CSS Custom:</strong> Kode CSS buatan sendiri yang digunakan untuk menyesuaikan desain di luar standar framework.
+                </div>
+                <div class="list-group-item">
+                  <strong>Responsive Design:</strong> Pendekatan desain web yang membuat halaman web tampil baik pada berbagai perangkat.
+                </div>
+              </div>
+            </section>
+
+            <!-- langkah kerja -->
+            <section>
+              <h2 class="section-title">Langkah Kerja</h2>
+              
+              <div class="step-item">
+                <span class="step-number">1. Persiapan Struktur File</span>
+                <p class="step-description">
+                  Buatlah folder baru bernama <code>laporan</code> di dalam direktori proyek utama. Kemudian, buatlah file <code>web7.html</code> dan <code>style-laporan.css</code> di dalamnya.
+                </p>
+                <div class="screenshot-placeholder">
+                  [Tempat Screenshot: Struktur Folder Proyek]
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">2. Menghubungkan Bootstrap</span>
+                <p class="step-description">
+                  Tambahkan link CDN Bootstrap 5 di bagian <code>&lt;head&gt;</code> file HTML Anda. Pastikan versi yang digunakan adalah yang terbaru untuk fitur yang lebih lengkap.
+                </p>
+                <div class="screenshot-placeholder">
+                  [Tempat Screenshot: Kode Header HTML]
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">3. Implementasi Container dan Card</span>
+                <p class="step-description">
+                  Gunakan class <code>.container</code> dari Bootstrap dan buat container custom dengan background putih dan border-radius besar untuk memberikan kesan modern dan premium.
+                </p>
+                <div class="screenshot-placeholder">
+                  [Tempat Screenshot: Hasil Implementasi Layout]
+                </div>
+              </div>
+
+            </section>
+
+            <div class="report-internal-footer">
+              <hr>
+              <div class="copyright text-muted">
+                &copy;2026 miftahulhdd. All rights reserved.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <!-- main content end -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
