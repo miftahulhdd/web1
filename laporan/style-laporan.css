@@ -1,178 +1,209 @@
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #4ca1af, #c4e0e5);
-    min-height: 100vh;
-    padding-bottom: 50px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #4ca1af, #c4e0e5);
+  min-height: 100vh;
+  padding-bottom: 50px;
 }
 
 .report-container {
-    background-color: #ffffff;
-    border-radius: 24px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    margin-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .back-btn {
-    text-decoration: none;
-    color: #6c757d;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
+  text-decoration: none;
+  color: #6c757d;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
 .back-btn:hover {
-    color: #4ca1af;
-    transform: translateX(-5px);
+  color: #4ca1af;
+  transform: translateX(-5px);
 }
 
 .course-badge {
-    background-color: #eef7f9;
-    color: #4ca1af;
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    display: inline-block;
+  background-color: #eef7f9;
+  color: #4ca1af;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  display: inline-block;
 }
 
 .publish-date {
-    color: #adb5bd;
-    font-size: 0.85rem;
-    margin-top: 10px;
-    margin-bottom: 25px;
+  color: #adb5bd;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 .article-title {
-    font-weight: 700;
-    color: #2d3436;
-    margin-bottom: 30px;
+  font-weight: 700;
+  color: #2d3436;
+  margin-bottom: 30px;
 }
 
 .section-title {
-    font-weight: 600;
-    color: #2d3436;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
+  font-weight: 600;
+  color: #2d3436;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
 }
 
 .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: #4ca1af;
-    border-radius: 2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #4ca1af;
+  border-radius: 2px;
 }
 
 .intro-text {
-    color: #636e72;
-    line-height: 1.8;
+  color: #636e72;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.link-text {
+  color: #07aac4;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
 }
 
 .list-group-custom {
-    border: none;
-    margin-top: 20px;
+  border: none;
+  margin-top: 20px;
 }
 
 .list-group-custom .list-group-item {
-    border: none;
-    background-color: #f8f9fa;
-    border-radius: 12px !important;
-    margin-bottom: 10px;
-    padding: 15px 20px;
-    color: #636e72;
-    transition: all 0.2s ease;
+  border: none;
+  background-color: #f8f9fa;
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  color: #636e72;
+  transition: all 0.2s ease;
 }
 
 .list-group-custom .list-group-item:hover {
-    background-color: #eef7f9;
-    transform: scale(1.01);
+  background-color: #eef7f9;
+  transform: scale(1.01);
 }
 
 .step-item {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .step-number {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #4ca1af;
-    margin-bottom: 10px;
-    display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #4ca1af;
+  margin-bottom: 10px;
+  display: block;
 }
 
 .step-description {
-    color: #636e72;
-    line-height: 1.7;
-    margin-bottom: 20px;
+  color: #636e72;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .screenshot-placeholder {
-    width: 100%;
-    min-height: 150px;
-    background-color: #f1f3f5;
-    border: 2px dashed #dee2e6;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #adb5bd;
-    font-style: italic;
-    transition: all 0.3s ease;
-    padding: 20px;
-    overflow: hidden;
+  width: 100%;
+  min-height: 150px;
+  background-color: #f1f3f5;
+  border: 2px dashed #dee2e6;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+  font-style: italic;
+  transition: all 0.3s ease;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .screenshot-placeholder img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* bagian ss */
+.screenshot-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+  background-color: #f1f3f5;
+  border: 2px dashed #dee2e6;
+  border-radius: 16px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.screenshot-group img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* bagian ss */
+
 .report-internal-footer {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .report-internal-footer hr {
-    border: 0;
-    border-top: 1px solid #dee2e6;
-    opacity: 1;
-    margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #dee2e6;
+  opacity: 1;
+  margin-bottom: 20px;
 }
 
 .report-internal-footer .copyright {
-    font-size: 0.85rem;
-    text-align: center;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
-.screenshot-placeholder:hover {
-    border-color: #4ca1af;
-    background-color: #eef7f9;
+.screenshot-placeholder:hover,
+.screenshot-group:hover {
+  border-color: #4ca1af;
+  background-color: #eef7f9;
 }
 
 .tracking-widest {
-    letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
 }
 
-
 @media (max-width: 768px) {
-    .report-container {
-        padding: 25px;
-        border-radius: 18px;
-    }
-    
-    .article-title {
-        font-size: 1.75rem;
-    }
+  .report-container {
+    padding: 25px;
+    border-radius: 18px;
+  }
+
+  .article-title {
+    font-size: 1.75rem;
+  }
 }

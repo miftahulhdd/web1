@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>miftahulhdd - about</title>
+    <title>report web7</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,21 +22,24 @@
     <link rel="stylesheet" href="style-laporan.css" />
   </head>
   <body>
-
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+    <!-- <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
       <div id="devToast" class="custom-toast">
         🚧 This site is still a work in progress :)
       </div>
-    </div>
+    </div> -->
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-      <div class="container-fluid px-3 px-lg-5 d-flex justify-content-between align-items-center">
+      <div
+        class="container-fluid px-3 px-lg-5 d-flex justify-content-between align-items-center"
+      >
         <a class="navbar-brand fw-semibold" href="#">miftahulhdd</a>
-        
-        
+
         <div class="d-none d-md-block mx-auto">
-          <span class="text-muted fw-medium text-uppercase small tracking-widest">Laboratory Report</span>
+          <span
+            class="text-muted fw-medium text-uppercase small tracking-widest"
+            >Laboratory Report</span
+          >
         </div>
 
         <div class="navbar-nav ms-auto ms-md-0 fw-semibold">
@@ -50,7 +53,6 @@
     <main class="container py-4">
       <div class="row justify-content-center">
         <div class="col-lg-9 col-md-11">
-          
           <div class="report-container">
             <!-- back button -->
             <a href="../portofolio.html" class="back-btn">
@@ -63,29 +65,172 @@
             </div>
 
             <!-- date -->
-            <div class="publish-date">
-              Published on: 11 Mei 2026
-            </div>
+            <div class="publish-date">Published on: 11 Mei 2026</div>
 
             <!-- title -->
-            <h1 class="article-title">Laporan Praktikum 7: Integrasi Bootstrap dan CSS Custom</h1>
+            <h1 class="article-title">
+              Laporan Praktikum 7: Konfigurasi Laravel
+            </h1>
 
             <!-- pendahuluan -->
             <section>
               <h2 class="section-title">Pendahuluan</h2>
               <p class="intro-text">
-                Praktikum kali ini berfokus pada bagaimana mengintegrasikan framework Bootstrap dengan CSS custom untuk menciptakan tampilan yang unik dan profesional. Kita akan mempelajari cara menimpa style bawaan Bootstrap serta cara mengorganisir file CSS agar tetap rapi dan mudah dikelola.
+                Praktikum ini bertujuan untuk memberikan pemahaman komprehensif
+                mengenai penggunaan Laravel sebagai salah satu framework PHP
+                paling populer yang berbasis arsitektur Model-View-Controller
+                (MVC). Melalui serangkaian tahapan mulai dari instalasi
+                perangkat pendukung hingga pembuatan proyek baru, praktikan
+                diharapkan mampu menguasai struktur dasar serta alur kerja
+                pengembangan aplikasi web modern yang efisien dan terorganisir.
+                Penggunaan alat bantu seperti Composer, Node.js, dan Git dalam
+                praktikum ini juga menekankan pada standar industri dalam
+                mengelola dependensi dan kontrol versi pada lingkungan
+                pengembangan Laravel.
               </p>
-              
+              <a class="link-text" href="https://github.com/miftahulhdd/web1" target="_blank">Repository Github</a>
+
               <div class="list-group list-group-custom">
                 <div class="list-group-item">
-                  <strong>Bootstrap:</strong> Framework CSS paling populer untuk membangun situs responsif dan mobile-first.
+                  <strong>Eloquent ORM (Object-Relational Mapping):</strong>
+                  Memudahkan interaksi dengan database menggunakan sintaks PHP
+                  yang intuitif. Anda dapat mendefinisikan model untuk setiap
+                  tabel database dan melakukan operasi CRUD (Create, Read,
+                  Update, Delete) dengan mudah. Eloquent juga mendukung relasi
+                  antar tabel (one-to-one, one-to-many, many-to-many).
                 </div>
                 <div class="list-group-item">
-                  <strong>CSS Custom:</strong> Kode CSS buatan sendiri yang digunakan untuk menyesuaikan desain di luar standar framework.
+                  <strong>Blade Templating Engine:</strong> Sistem templating
+                  yang sederhana namun powerful, memungkinkan Anda menggunakan
+                  sintaks PHP dalam template HTML dengan cara yang bersih dan
+                  aman. Blade menyediakan direktif-direktif seperti @if,
+                  @foreach, @extends, @yield, dan komponen untuk membuat
+                  tampilan dinamis.
                 </div>
                 <div class="list-group-item">
-                  <strong>Responsive Design:</strong> Pendekatan desain web yang membuat halaman web tampil baik pada berbagai perangkat.
+                  <strong>Artisan Console:</strong> Command-line interface (CLI)
+                  yang disertakan dengan Laravel. Artisan menyediakan banyak
+                  perintah berguna untuk otomatisasi tugas-tugas umum seperti
+                  membuat model, migration, controller, seeder, menjalankan
+                  pengujian, membersihkan cache, dan banyak lagi.
+                </div>
+                <div class="list-group-item">
+                  <strong>Routing:</strong> Sistem perutean yang fleksibel
+                  memungkinkan Anda mendefinisikan URL aplikasi Anda dan
+                  mengaitkannya dengan controller atau closure functions.
+                  Laravel mendukung berbagai jenis rute dan middleware untuk
+                  mengontrol akses.
+                </div>
+                <div class="list-group-item">
+                  <strong>Middleware:</strong> Mekanisme untuk memfilter HTTP
+                  request yang masuk ke aplikasi Anda. Middleware dapat
+                  digunakan untuk autentikasi, logging, validasi, dan
+                  tugas-tugas lain sebelum atau sesudah request ditangani oleh
+                  aplikasi.
+                </div>
+                <div class="list-group-item">
+                  <strong>Form Request Validation:</strong> Memudahkan proses
+                  validasi data yang dikirim melalui form. Anda dapat membuat
+                  kelas Form Request khusus dengan aturan validasi yang jelas
+                  dan Laravel akan secara otomatis menangani proses validasi dan
+                  menampilkan pesan kesalahan.
+                </div>
+                <div class="list-group-item">
+                  <strong>Security:</strong> Laravel dibangun dengan
+                  mempertimbangkan keamanan. Beberapa fitur keamanan bawaan
+                  meliputi proteksi terhadap CSRF (Cross-Site Request Forgery),
+                  XSS (Cross-Site Scripting), dan SQL injection.
+                </div>
+                <div class="list-group-item">
+                  <strong>Authentication & Authorization:</strong> Menyediakan
+                  sistem otentikasi (login, registrasi, lupa kata sandi) dan
+                  otorisasi (hak akses pengguna) yang mudah diimplementasikan.
+                  Laravel Breeze dan Jetstream menyediakan scaffolding UI untuk
+                  fitur-fitur ini.
+                </div>
+                <div class="list-group-item">
+                  <strong>Testing:</strong> Dukungan bawaan untuk berbagai jenis
+                  pengujian, termasuk unit testing, integration testing, dan
+                  end-to-end testing. Laravel menyediakan helper functions dan
+                  assertion methods untuk memudahkan penulisan tes.
+                </div>
+                <div class="list-group-item">
+                  <strong>Queues:</strong> Sistem antrian yang memungkinkan Anda
+                  menunda tugas-tugas yang memakan waktu (seperti pengiriman
+                  email atau pemrosesan data) dan menjalankannya di latar
+                  belakang. Ini meningkatkan responsivitas aplikasi Anda.
+                </div>
+                <div class="list-group-item">
+                  <strong>Caching:</strong> Mendukung berbagai sistem caching
+                  (seperti Redis, Memcached, file) untuk meningkatkan performa
+                  aplikasi dengan menyimpan data yang sering diakses dalam
+                  memori.
+                </div>
+                <div class="list-group-item">
+                  <strong>Events & Listeners:</strong> Implementasi dari pola
+                  Observer, memungkinkan Anda membuat event dan listener untuk
+                  menjalankan kode tertentu ketika event tersebut terjadi dalam
+                  aplikasi Anda.
+                </div>
+                <div class="list-group-item">
+                  <strong>Notifications:</strong> Memudahkan pengiriman
+                  notifikasi ke berbagai saluran, seperti email, SMS, database,
+                  atau layanan pihak ketiga.
+                </div>
+                <div class="list-group-item">
+                  <strong>Broadcasting:</strong> Memungkinkan Anda melakukan
+                  siaran event secara real-time melalui WebSockets. Ini berguna
+                  untuk fitur seperti live chat atau notifikasi real-time.
+                </div>
+                <div class="list-group-item">
+                  <strong>Task Scheduling:</strong> Memungkinkan Anda
+                  menjadwalkan tugas-tugas cron menggunakan sintaks yang
+                  ekspresif dalam kode PHP Anda.
+                </div>
+                <div class="list-group-item">
+                  <strong>Passport (OAuth2 Server):</strong> Paket resmi untuk
+                  mengimplementasikan otentikasi OAuth2, memungkinkan aplikasi
+                  Anda menjadi penyedia otentikasi untuk aplikasi lain.
+                </div>
+                <div class="list-group-item">
+                  <strong>Sanctum (API Authentication):</strong> Paket ringan
+                  untuk mengimplementasikan sistem otentikasi berbasis token
+                  untuk Single-Page Applications (SPAs), mobile applications,
+                  dan simple APIs.
+                </div>
+                <div class="list-group-item">
+                  <strong>Socialite (Social Authentication):</strong> Memudahkan
+                  integrasi otentikasi dengan berbagai penyedia layanan OAuth
+                  seperti Facebook, Twitter, Google, dan lainnya.
+                </div>
+                <div class="list-group-item">
+                  <strong>Notifications:</strong> Memudahkan pengiriman
+                  notifikasi ke berbagai saluran, seperti email, SMS, database,
+                  atau layanan pihak ketiga.
+                </div>
+                <div class="list-group-item">
+                  <strong>Filesystem:</strong> Abstraksi untuk berinteraksi
+                  dengan berbagai sistem penyimpanan file, baik lokal maupun
+                  cloud (seperti Amazon S3 atau Google Cloud Storage).
+                </div>
+                <div class="list-group-item">
+                  <strong>Mail:</strong> Memudahkan pengiriman email dengan
+                  dukungan untuk berbagai driver seperti SMTP, Mailgun, dan
+                  Amazon SES.
+                </div>
+                <div class="list-group-item">
+                  <strong>Pusher (Realtime Services):</strong> Integrasi mudah
+                  dengan layanan Pusher untuk menambahkan fitur realtime ke
+                  aplikasi Anda.
+                </div>
+                <div class="list-group-item">
+                  <strong>Localization:</strong> Memudahkan pembuatan aplikasi
+                  multibahasa dengan fitur untuk mengelola terjemahan.
+                </div>
+                <div class="list-group-item">
+                  <strong>Packages:</strong> Ekosistem paket yang kaya dan
+                  berkembang pesat melalui Composer, memungkinkan Anda dengan
+                  mudah menambahkan fungsionalitas tambahan ke aplikasi Anda.
                 </div>
               </div>
             </section>
@@ -93,48 +238,131 @@
             <!-- langkah kerja -->
             <section>
               <h2 class="section-title">Langkah Kerja</h2>
-              
+
               <div class="step-item">
-                <span class="step-number">1. Persiapan Struktur File</span>
+                <span class="step-number">1. Instalasi dan Konfigurasi</span>
                 <p class="step-description">
-                  Buatlah folder baru bernama <code>laporan</code> di dalam direktori proyek utama. Kemudian, buatlah file <code>web7.html</code> dan <code>style-laporan.css</code> di dalamnya.
+                  Pertama, kita harus memastikan alat-alat yang dibutuhkan sudah
+                  terinstall di komputer kita. Mulai dari PHP, XAMPP/Laragon,
+                  Composer, Git, Node JS, dan NPM.
                 </p>
-                <div class="screenshot-placeholder">
-                  [Tempat Screenshot: Struktur Folder Proyek]
+                <div class="screenshot-group">
+                  <img src="../ss/ss1.png" alt="ss1" />
+                  <img src="../ss/ss2.png" alt="ss2" />
+                  <img src="../ss/ss3.png" alt="ss3" />
                 </div>
               </div>
 
               <div class="step-item">
-                <span class="step-number">2. Menghubungkan Bootstrap</span>
+                <span class="step-number">2. Membuat Project Laravel</span>
                 <p class="step-description">
-                  Tambahkan link CDN Bootstrap 5 di bagian <code>&lt;head&gt;</code> file HTML Anda. Pastikan versi yang digunakan adalah yang terbaru untuk fitur yang lebih lengkap.
+                  Ada beberapa cara yang dapat dilakukan untuk membuat project
+                  laravel, pertama kita harus download installer laravelnya
+                  terlebih dahulu, agar kedepannya tinggal create project saja,
+                  dengan cara
+                  <code>composer global require laravel/installer</code>. Nah
+                  jika installer laravelnya telah terdownload, untuk kedepannya
+                  kita dapat langsung create project laravel baru saja, ada 2
+                  cara juga, yaitu <code>laravel new nama-project</code> atau
+                  <code
+                    >composer create-project
+                    laravel/laravel=^versi-yg-akan-diinstall nama-project
+                    --prefer-dist</code
+                  >. Disini aku menggunakan code create project yang pertama.
                 </p>
                 <div class="screenshot-placeholder">
-                  [Tempat Screenshot: Kode Header HTML]
+                  <img src="../ss/ss4.png" alt="ss4" />
+                </div>
+                <p class="step-description">
+                  Lalu biarkan saja prosesnya berjalan, akan ada beberapa
+                  pertanyaan, jawablah sesuai kebutuhan, seperti pertanyaan
+                  mengenai database, dan lainnya. Jika sudah, akan terlihat
+                  output seperti ini:
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss5.png" alt="ss5" />
+                  <img src="../ss/ss6.png" alt="ss6" />
+                </div>
+                <p class="step-description">
+                  Setelah project baru sudah terbentuk, kita akan diminta untuk
+                  change directory ke folder project baru tersebut, gunakan
+                  perintah <code>cd nama-project</code> lalu kita jalankan
+                  command <code>npm install && npm run build</code> dan
+                  selanjutnya <code>composer run dev / npm run dev</code> ini
+                  berfungsi agar project kita selalu di refresh oleh sistemnya
+                  saat proses development.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss7.png" alt="ss7" />
+                  <img src="../ss/ss8.png" alt="ss8" />
+                  <img src="../ss/ss9.png" alt="ss9" />
+                </div>
+                <p class="step-description">
+                  Terakhir kita jalankan perintah
+                  <code>php artisan serve</code> untuk menjalankan project
+                  laravelnya. Nanti terminal akan memberi output halaman
+                  localhost tempat project kita berjalan.
+                </p>
+                <div class="screenshot-placeholder">
+                  <img src="../ss/ss10.png" alt="ss10" />
+                </div>
+                <p class="step-description">
+                  Jika tampilannya seperti ini, artinya project Laravel kita
+                  sudah berjalan dengan normal.
+                </p>
+                <div class="screenshot-placeholder">
+                  <img src="../ss/ss11.png" alt="ss11" />
+                </div>
+                <p class="step-description">
+                  Selanjutnya kita akan mencoba print hello world. Disini saya
+                  melakukannya dengan membuat route baru mengarah ke
+                  <code>/hello</code>.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss12.png" alt="ss12" />
+                  <img src="../ss/ss13.png" alt="ss13" />
                 </div>
               </div>
 
               <div class="step-item">
-                <span class="step-number">3. Implementasi Container dan Card</span>
+                <span class="step-number">3. MVC Laravel</span>
+                <div class="screenshot-placeholder">
+                  <img src="../ss/ss16.png" alt="ss16" />
+                </div>
                 <p class="step-description">
-                  Gunakan class <code>.container</code> dari Bootstrap dan buat container custom dengan background putih dan border-radius besar untuk memberikan kesan modern dan premium.
+                  Model <code>php artisan make: model sebuah-model</code>.
+                  Berfungsi untuk mengakses dan mengelola data atau database
+                  seperti query ke database, insert, update, delete dan
+                  lain-lain.
                 </p>
                 <div class="screenshot-placeholder">
-                  [Tempat Screenshot: Hasil Implementasi Layout]
+                  <img src="../ss/ss14.png" alt="ss14" />
+                </div>
+                <p class="step-description">
+                  View. Berfungsi sebagai tampilan atau interface aplikasi,
+                  untuk menampilkan data yang didapatkan dari suatu
+                  <code>model</code> melalui <code>controller</code>.
+                </p>
+
+                <p class="step-description">
+                  Controller. Berfungsi untuk menangani <code>request</code> dan
+                  <code>response</code>, menerima request dan memproses request
+                  kemudian mengembalikannya dalam bentuk data atau view dari
+                  suatu model.
+                </p>
+                <div class="screenshot-placeholder">
+                  <img src="../ss/ss15.png" alt="ss15" />
                 </div>
               </div>
-
             </section>
 
             <div class="report-internal-footer">
-              <hr>
+              <hr />
               <div class="copyright text-muted">
                 &copy;2026 miftahulhdd. All rights reserved.
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </main>

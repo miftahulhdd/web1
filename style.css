@@ -430,3 +430,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.course-badge {
+    background-color: #eef7f9;
+    color: #4ca1af;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    display: inline-block;
+}
