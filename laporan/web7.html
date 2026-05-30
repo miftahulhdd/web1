@@ -65,54 +65,58 @@
             </div>
 
             <!-- date -->
-            <div class="publish-date">Published on: 11 Mei 2026</div>
+            <div class="publish-date">Published on: 28 Mei 2026</div>
 
             <!-- title -->
-            <h1 class="article-title">
-              Laporan Praktikum 7: Konfigurasi Laravel
-            </h1>
+            <h1 class="article-title">Laporan Praktikum 7: MVC Laravel</h1>
 
             <!-- pendahuluan -->
             <section>
               <h2 class="section-title">Pendahuluan</h2>
               <p class="intro-text">
-                Praktikum ini bertujuan untuk memberikan pemahaman komprehensif
-                mengenai penggunaan Laravel sebagai salah satu framework PHP
-                paling populer yang berbasis arsitektur Model-View-Controller
-                (MVC). Melalui serangkaian tahapan mulai dari instalasi
-                perangkat pendukung hingga pembuatan proyek baru, praktikan
-                diharapkan mampu menguasai struktur dasar serta alur kerja
-                pengembangan aplikasi web modern yang efisien dan terorganisir.
-                Penggunaan alat bantu seperti Composer, Node.js, dan Git dalam
-                praktikum ini juga menekankan pada standar industri dalam
-                mengelola dependensi dan kontrol versi pada lingkungan
-                pengembangan Laravel.
+                Praktikum ini diselenggarakan untuk membekali mahasiswa dengan
+                kompetensi fundamental dalam pengembangan aplikasi web dinamis
+                berbasis kerangka kerja PHP, dengan fokus utama pada
+                implementasi arsitektur Model-View-Controller (MVC) melalui
+                framework Laravel. Melalui modul ini, mahasiswa diarahkan untuk
+                memahami alur kerja Laravel yang terstruktur guna mengelola rute
+                aplikasi, operasi basis data, dan antarmuka pengguna secara
+                efisien. Secara spesifik, praktikum ini bertujuan agar mahasiswa
+                mampu mengelola skema basis data melalui fitur Migration dan
+                Seeding, mengonfigurasi Routing sebagai gerbang utama aplikasi,
+                serta mengoptimalkan peran Controller sebagai mediator logika
+                antara Model dan tampilan. Selain itu, penggunaan Blade Template
+                Engine ditekankan untuk membangun antarmuka yang konsisten,
+                sehingga pada akhirnya mahasiswa dapat mengimplementasikan
+                fungsionalitas CRUD yang sistematis dan memenuhi standar
+                pengembangan aplikasi modern.
               </p>
-              <a class="link-text" href="https://github.com/miftahulhdd/web1" target="_blank">Repository Github</a>
+              <a
+                class="link-text"
+                href="https://github.com/miftahulhdd/web1"
+                target="_blank"
+                >Repository Github</a
+              >
 
               <div class="list-group list-group-custom">
                 <div class="list-group-item">
-                  <strong>Eloquent ORM (Object-Relational Mapping):</strong>
-                  Memudahkan interaksi dengan database menggunakan sintaks PHP
-                  yang intuitif. Anda dapat mendefinisikan model untuk setiap
-                  tabel database dan melakukan operasi CRUD (Create, Read,
-                  Update, Delete) dengan mudah. Eloquent juga mendukung relasi
-                  antar tabel (one-to-one, one-to-many, many-to-many).
+                  <strong>Model-View-Controller (MVC):</strong>
+                  Pola arsitektur perangkat lunak yang memisahkan aplikasi
+                  menjadi tiga komponen utama: Model (data/logika database),
+                  View (antarmuka pengguna), dan Controller (logika
+                  bisnis/perantara).
                 </div>
                 <div class="list-group-item">
-                  <strong>Blade Templating Engine:</strong> Sistem templating
-                  yang sederhana namun powerful, memungkinkan Anda menggunakan
-                  sintaks PHP dalam template HTML dengan cara yang bersih dan
-                  aman. Blade menyediakan direktif-direktif seperti @if,
-                  @foreach, @extends, @yield, dan komponen untuk membuat
-                  tampilan dinamis.
+                  <strong>Migration:</strong> Fitur di Laravel yang berfungsi
+                  sebagai version control untuk database. Migration memungkinkan
+                  pengembang membuat, mengubah, atau menghapus struktur tabel
+                  melalui kode program PHP tanpa perlu menyentuh DBMS secara
+                  manual.
                 </div>
                 <div class="list-group-item">
-                  <strong>Artisan Console:</strong> Command-line interface (CLI)
-                  yang disertakan dengan Laravel. Artisan menyediakan banyak
-                  perintah berguna untuk otomatisasi tugas-tugas umum seperti
-                  membuat model, migration, controller, seeder, menjalankan
-                  pengujian, membersihkan cache, dan banyak lagi.
+                  <strong>Seeding & Seeder:</strong> Fitur untuk mengisi
+                  database dengan data awal atau data dummy secara otomatis,
+                  yang sangat berguna dalam fase pengujian aplikasi (testing).
                 </div>
                 <div class="list-group-item">
                   <strong>Routing:</strong> Sistem perutean yang fleksibel
@@ -122,115 +126,15 @@
                   mengontrol akses.
                 </div>
                 <div class="list-group-item">
-                  <strong>Middleware:</strong> Mekanisme untuk memfilter HTTP
-                  request yang masuk ke aplikasi Anda. Middleware dapat
-                  digunakan untuk autentikasi, logging, validasi, dan
-                  tugas-tugas lain sebelum atau sesudah request ditangani oleh
-                  aplikasi.
+                  <strong>Eloquent ORM & Model:</strong> Representasi tabel
+                  database ke dalam objek PHP. Eloquent mempermudah manipulasi
+                  data (operasi CRUD) dengan sintaks pemrograman yang ekspresif.
                 </div>
                 <div class="list-group-item">
-                  <strong>Form Request Validation:</strong> Memudahkan proses
-                  validasi data yang dikirim melalui form. Anda dapat membuat
-                  kelas Form Request khusus dengan aturan validasi yang jelas
-                  dan Laravel akan secara otomatis menangani proses validasi dan
-                  menampilkan pesan kesalahan.
-                </div>
-                <div class="list-group-item">
-                  <strong>Security:</strong> Laravel dibangun dengan
-                  mempertimbangkan keamanan. Beberapa fitur keamanan bawaan
-                  meliputi proteksi terhadap CSRF (Cross-Site Request Forgery),
-                  XSS (Cross-Site Scripting), dan SQL injection.
-                </div>
-                <div class="list-group-item">
-                  <strong>Authentication & Authorization:</strong> Menyediakan
-                  sistem otentikasi (login, registrasi, lupa kata sandi) dan
-                  otorisasi (hak akses pengguna) yang mudah diimplementasikan.
-                  Laravel Breeze dan Jetstream menyediakan scaffolding UI untuk
-                  fitur-fitur ini.
-                </div>
-                <div class="list-group-item">
-                  <strong>Testing:</strong> Dukungan bawaan untuk berbagai jenis
-                  pengujian, termasuk unit testing, integration testing, dan
-                  end-to-end testing. Laravel menyediakan helper functions dan
-                  assertion methods untuk memudahkan penulisan tes.
-                </div>
-                <div class="list-group-item">
-                  <strong>Queues:</strong> Sistem antrian yang memungkinkan Anda
-                  menunda tugas-tugas yang memakan waktu (seperti pengiriman
-                  email atau pemrosesan data) dan menjalankannya di latar
-                  belakang. Ini meningkatkan responsivitas aplikasi Anda.
-                </div>
-                <div class="list-group-item">
-                  <strong>Caching:</strong> Mendukung berbagai sistem caching
-                  (seperti Redis, Memcached, file) untuk meningkatkan performa
-                  aplikasi dengan menyimpan data yang sering diakses dalam
-                  memori.
-                </div>
-                <div class="list-group-item">
-                  <strong>Events & Listeners:</strong> Implementasi dari pola
-                  Observer, memungkinkan Anda membuat event dan listener untuk
-                  menjalankan kode tertentu ketika event tersebut terjadi dalam
-                  aplikasi Anda.
-                </div>
-                <div class="list-group-item">
-                  <strong>Notifications:</strong> Memudahkan pengiriman
-                  notifikasi ke berbagai saluran, seperti email, SMS, database,
-                  atau layanan pihak ketiga.
-                </div>
-                <div class="list-group-item">
-                  <strong>Broadcasting:</strong> Memungkinkan Anda melakukan
-                  siaran event secara real-time melalui WebSockets. Ini berguna
-                  untuk fitur seperti live chat atau notifikasi real-time.
-                </div>
-                <div class="list-group-item">
-                  <strong>Task Scheduling:</strong> Memungkinkan Anda
-                  menjadwalkan tugas-tugas cron menggunakan sintaks yang
-                  ekspresif dalam kode PHP Anda.
-                </div>
-                <div class="list-group-item">
-                  <strong>Passport (OAuth2 Server):</strong> Paket resmi untuk
-                  mengimplementasikan otentikasi OAuth2, memungkinkan aplikasi
-                  Anda menjadi penyedia otentikasi untuk aplikasi lain.
-                </div>
-                <div class="list-group-item">
-                  <strong>Sanctum (API Authentication):</strong> Paket ringan
-                  untuk mengimplementasikan sistem otentikasi berbasis token
-                  untuk Single-Page Applications (SPAs), mobile applications,
-                  dan simple APIs.
-                </div>
-                <div class="list-group-item">
-                  <strong>Socialite (Social Authentication):</strong> Memudahkan
-                  integrasi otentikasi dengan berbagai penyedia layanan OAuth
-                  seperti Facebook, Twitter, Google, dan lainnya.
-                </div>
-                <div class="list-group-item">
-                  <strong>Notifications:</strong> Memudahkan pengiriman
-                  notifikasi ke berbagai saluran, seperti email, SMS, database,
-                  atau layanan pihak ketiga.
-                </div>
-                <div class="list-group-item">
-                  <strong>Filesystem:</strong> Abstraksi untuk berinteraksi
-                  dengan berbagai sistem penyimpanan file, baik lokal maupun
-                  cloud (seperti Amazon S3 atau Google Cloud Storage).
-                </div>
-                <div class="list-group-item">
-                  <strong>Mail:</strong> Memudahkan pengiriman email dengan
-                  dukungan untuk berbagai driver seperti SMTP, Mailgun, dan
-                  Amazon SES.
-                </div>
-                <div class="list-group-item">
-                  <strong>Pusher (Realtime Services):</strong> Integrasi mudah
-                  dengan layanan Pusher untuk menambahkan fitur realtime ke
-                  aplikasi Anda.
-                </div>
-                <div class="list-group-item">
-                  <strong>Localization:</strong> Memudahkan pembuatan aplikasi
-                  multibahasa dengan fitur untuk mengelola terjemahan.
-                </div>
-                <div class="list-group-item">
-                  <strong>Packages:</strong> Ekosistem paket yang kaya dan
-                  berkembang pesat melalui Composer, memungkinkan Anda dengan
-                  mudah menambahkan fungsionalitas tambahan ke aplikasi Anda.
+                  <strong>Blade Template Engine:</strong> Mesin templating
+                  bawaan Laravel yang kuat dan aman. Blade menyediakan fitur
+                  layouting (@extends, @yield, @section) untuk membuat komponen
+                  antarmuka yang dapat digunakan berulang kali (reusable).
                 </div>
               </div>
             </section>
@@ -240,118 +144,102 @@
               <h2 class="section-title">Langkah Kerja</h2>
 
               <div class="step-item">
-                <span class="step-number">1. Instalasi dan Konfigurasi</span>
+                <span class="step-number"
+                  >1. Konfigurasi Lingkungan dan Database</span
+                >
                 <p class="step-description">
-                  Pertama, kita harus memastikan alat-alat yang dibutuhkan sudah
-                  terinstall di komputer kita. Mulai dari PHP, XAMPP/Laragon,
-                  Composer, Git, Node JS, dan NPM.
+                  Buka file .env pada direktori root proyek Laravel, kemudian
+                  sesuaikan parameter database sebagai berikut:
                 </p>
                 <div class="screenshot-group">
-                  <img src="../ss/ss1.png" alt="ss1" />
-                  <img src="../ss/ss2.png" alt="ss2" />
-                  <img src="../ss/ss3.png" alt="ss3" />
+                  <img src="../ss/ss2-1.png" alt="ss2-1" />
                 </div>
               </div>
 
               <div class="step-item">
-                <span class="step-number">2. Membuat Project Laravel</span>
+                <span class="step-number"
+                  >2. Membuat tabel product menggunakan Migration
+                </span>
                 <p class="step-description">
-                  Ada beberapa cara yang dapat dilakukan untuk membuat project
-                  laravel, pertama kita harus download installer laravelnya
-                  terlebih dahulu, agar kedepannya tinggal create project saja,
-                  dengan cara
-                  <code>composer global require laravel/installer</code>. Nah
-                  jika installer laravelnya telah terdownload, untuk kedepannya
-                  kita dapat langsung create project laravel baru saja, ada 2
-                  cara juga, yaitu <code>laravel new nama-project</code> atau
-                  <code
-                    >composer create-project
-                    laravel/laravel=^versi-yg-akan-diinstall nama-project
-                    --prefer-dist</code
-                  >. Disini aku menggunakan code create project yang pertama.
-                </p>
-                <div class="screenshot-placeholder">
-                  <img src="../ss/ss4.png" alt="ss4" />
-                </div>
-                <p class="step-description">
-                  Lalu biarkan saja prosesnya berjalan, akan ada beberapa
-                  pertanyaan, jawablah sesuai kebutuhan, seperti pertanyaan
-                  mengenai database, dan lainnya. Jika sudah, akan terlihat
-                  output seperti ini:
+                  File migration akan berada di folder database/migrations,
+                  untuk membuat file migration baru gunakan perintah
+                  <code>php artisan make:migration create_products_table</code>.
+                  Setelah file migration berhasil dibuat, buka file tersebut
+                  lalu tambahkan kode berikut pada method up() untuk membuat
+                  tabel products dengan field id, name, description, price,
+                  created_at dan updated_at.
                 </p>
                 <div class="screenshot-group">
-                  <img src="../ss/ss5.png" alt="ss5" />
-                  <img src="../ss/ss6.png" alt="ss6" />
+                  <img src="../ss/ss2-2.png" alt="ss2-2" />
+                  <img src="../ss/ss2-3.png" alt="ss2-3" />
+                  <img src="../ss/ss2-4.png" alt="ss2-4" />
                 </div>
                 <p class="step-description">
-                  Setelah project baru sudah terbentuk, kita akan diminta untuk
-                  change directory ke folder project baru tersebut, gunakan
-                  perintah <code>cd nama-project</code> lalu kita jalankan
-                  command <code>npm install && npm run build</code> dan
-                  selanjutnya <code>composer run dev / npm run dev</code> ini
-                  berfungsi agar project kita selalu di refresh oleh sistemnya
-                  saat proses development.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss7.png" alt="ss7" />
-                  <img src="../ss/ss8.png" alt="ss8" />
-                  <img src="../ss/ss9.png" alt="ss9" />
-                </div>
-                <p class="step-description">
-                  Terakhir kita jalankan perintah
-                  <code>php artisan serve</code> untuk menjalankan project
-                  laravelnya. Nanti terminal akan memberi output halaman
-                  localhost tempat project kita berjalan.
+                  Execute migration menggunakan perintah
+                  <code>php artisan migrate</code>
+                  , setelah dijalankan perintah tersebut maka secara otomatis
+                  tabel products akan terbentuk.
                 </p>
                 <div class="screenshot-placeholder">
-                  <img src="../ss/ss10.png" alt="ss10" />
-                </div>
-                <p class="step-description">
-                  Jika tampilannya seperti ini, artinya project Laravel kita
-                  sudah berjalan dengan normal.
-                </p>
-                <div class="screenshot-placeholder">
-                  <img src="../ss/ss11.png" alt="ss11" />
-                </div>
-                <p class="step-description">
-                  Selanjutnya kita akan mencoba print hello world. Disini saya
-                  melakukannya dengan membuat route baru mengarah ke
-                  <code>/hello</code>.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss12.png" alt="ss12" />
-                  <img src="../ss/ss13.png" alt="ss13" />
+                  <img src="../ss/ss2-5.png" alt="ss2-5" />
                 </div>
               </div>
 
               <div class="step-item">
-                <span class="step-number">3. MVC Laravel</span>
-                <div class="screenshot-placeholder">
-                  <img src="../ss/ss16.png" alt="ss16" />
+                <span class="step-number"
+                  >3. Membuat dan menjalankan Seeder</span
+                >
+                <div class="screenshot-group">
+                  <img src="../ss/ss2-6.png" alt="ss2-6" />
+                  <img src="../ss/ss2-7.png" alt="ss2-7" />
                 </div>
                 <p class="step-description">
-                  Model <code>php artisan make: model sebuah-model</code>.
-                  Berfungsi untuk mengakses dan mengelola data atau database
-                  seperti query ke database, insert, update, delete dan
-                  lain-lain.
+                  Setelah file seeder berhasil dibuat, buka file tersebut lalu
+                  tambahkan kode berikut.
                 </p>
                 <div class="screenshot-placeholder">
-                  <img src="../ss/ss14.png" alt="ss14" />
+                  <img src="../ss/ss2-8.png" alt="ss2-8" />
                 </div>
                 <p class="step-description">
-                  View. Berfungsi sebagai tampilan atau interface aplikasi,
-                  untuk menampilkan data yang didapatkan dari suatu
-                  <code>model</code> melalui <code>controller</code>.
-                </p>
-
-                <p class="step-description">
-                  Controller. Berfungsi untuk menangani <code>request</code> dan
-                  <code>response</code>, menerima request dan memproses request
-                  kemudian mengembalikannya dalam bentuk data atau view dari
-                  suatu model.
+                  Tambahkan kode berikut pada file DatabaseSeeder.php untuk
+                  menjalankan seeder.
+                  <code>$this->call(ProductSeeder::class);</code>
                 </p>
                 <div class="screenshot-placeholder">
-                  <img src="../ss/ss15.png" alt="ss15" />
+                  <img src="../ss/ss2-9.png" alt="ss2-9" />
+                </div>
+                <p class="step-description">
+                  Jalankan seeder menggunakan perintah
+                  <code>php artisan db:seed</code>
+                  , setelah dijalankan perintah tersebut maka secara otomatis
+                  data akan terisi pada tabel products.
+                </p>
+                <div class="screenshot-placeholder">
+                  <img src="../ss/ss2-10.png" alt="ss2-10" />
+                </div>
+                <p class="step-description">
+                  Controller bertindak sebagai pengelola logika utama yang
+                  menjembatani permintaan pengguna, pengolahan data melalui
+                  Model, hingga pengiriman hasil ke View, di mana fungsionalitas
+                  standarnya seperti menampilkan, memperbarui, dan menghapus
+                  data dapat dibuat secara instan melalui perintah CLI <code>php
+                  artisan make:controller NamaController --resource</code>. Di sisi
+                  lain, antarmuka pengguna dikelola secara efisien menggunakan
+                  Blade Template Engine yang mendukung pembuatan kerangka
+                  halaman dinamis melalui fitur penataan letak (layouting),
+                  sehingga struktur kode tampilan menjadi lebih modular dan
+                  terorganisir tanpa perlu pengulangan kode yang redundan.
+                  Dengan demikian, implementasi MVC di Laravel tidak hanya
+                  memisahkan tanggung jawab antara data, logika bisnis, dan
+                  tampilan, tetapi juga meningkatkan produktivitas pengembangan
+                  aplikasi web yang kompleks dengan cara yang terstruktur dan
+                  mudah dipelihara.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss2-11.png" alt="ss2-11" />
+                  <img src="../ss/ss2-12.png" alt="ss2-12" />
+                  <img src="../ss/ss2-13.png" alt="ss2-13" />
+                  <img src="../ss/ss2-14.png" alt="ss2-14" />
                 </div>
               </div>
             </section>
