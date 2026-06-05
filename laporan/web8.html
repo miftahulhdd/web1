@@ -245,7 +245,9 @@
               <h2 class="section-title">Langkah Kerja</h2>
 
               <div class="step-item">
-                <span class="step-number">1. Membuat migration untuk tabel major</span>
+                <span class="step-number"
+                  >1. Membuat migration untuk tabel</span
+                >
                 <p class="step-description">
                   Pertama kita buat migration untuk tabel major, dengan perintah
                   <code>php artisan make:migration create_majors_table</code>.
@@ -260,97 +262,226 @@
               </div>
 
               <div class="step-item">
-                <span class="step-number">2. Membuat migration untuk tabel student</span>
+                <!-- <span class="step-number"
+                  >2. Membuat migration untuk tabel student</span
+                > -->
                 <p class="step-description">
                   Selanjutnya kita buat migration untuk tabel student, dengan
-                  perintah <code>php artisan make:migration create_students_table</code>.
+                  perintah
+                  <code>php artisan make:migration create_students_table</code>.
                   Lalu kita buka file migration yang sudah dibuat, lalu kita
                   buat field-fieldnya, disini aku membuat field id, name,
                   major_id, dan timestamps. Disini kita buat field major_id
                   sebagai foreign key yang mengarah ke tabel majors.
                 </p>
-                <div class="screenshot-placeholder">
-                  <img src="../ss/ss4.png" alt="ss4" />
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-3.png" alt="ss3" />
+                  <img src="../ss/ss3-4.png" alt="ss4" />
                 </div>
                 <p class="step-description">
-                  Lalu biarkan saja prosesnya berjalan, akan ada beberapa
-                  pertanyaan, jawablah sesuai kebutuhan, seperti pertanyaan
-                  mengenai database, dan lainnya. Jika sudah, akan terlihat
-                  output seperti ini:
+                  Selanjutnya membuat migration untuk tabel subject, dengan
+                  perintah
+                  <code>php artisan make:migration create_subjects_table</code>.
+                  Lalu kita buka file migration yang sudah dibuat, lalu kita
+                  buat field-fieldnya.
                 </p>
                 <div class="screenshot-group">
-                  <img src="../ss/ss5.png" alt="ss5" />
-                  <img src="../ss/ss6.png" alt="ss6" />
+                  <img src="../ss/ss3-5.png" alt="ss5" />
+                  <img src="../ss/ss3-6.png" alt="ss6" />
                 </div>
                 <p class="step-description">
-                  Setelah project baru sudah terbentuk, kita akan diminta untuk
-                  change directory ke folder project baru tersebut, gunakan
-                  perintah <code>cd nama-project</code> lalu kita jalankan
-                  command <code>npm install && npm run build</code> dan
-                  selanjutnya <code>composer run dev / npm run dev</code> ini
-                  berfungsi agar project kita selalu di refresh oleh sistemnya
-                  saat proses development.
+                  Selanjutnya kita buat migration untuk tabel pivot
+                  student_subject, dengan perintah
+                  <code
+                    >php artisan make:migration
+                    create_student_subject_table</code
+                  >. Lalu kita buka file migration yang sudah dibuat, lalu kita
+                  buat field-fieldnya, disini aku membuat field student_id dan
+                  subject_id sebagai foreign key yang mengarah ke tabel students
+                  dan subjects.
                 </p>
                 <div class="screenshot-group">
-                  <img src="../ss/ss7.png" alt="ss7" />
-                  <img src="../ss/ss8.png" alt="ss8" />
-                  <img src="../ss/ss9.png" alt="ss9" />
+                  <img src="../ss/ss3-7.png" alt="ss7" />
+                  <img src="../ss/ss3-8.png" alt="ss8" />
                 </div>
                 <p class="step-description">
                   Terakhir kita jalankan perintah
-                  <code>php artisan serve</code> untuk menjalankan project
-                  laravelnya. Nanti terminal akan memberi output halaman
-                  localhost tempat project kita berjalan.
+                  <code>php artisan migrate</code> untuk menjalankan migration
+                  dan membuat tabel di database.
                 </p>
                 <div class="screenshot-placeholder">
-                  <img src="../ss/ss10.png" alt="ss10" />
-                </div>
-                <p class="step-description">
-                  Jika tampilannya seperti ini, artinya project Laravel kita
-                  sudah berjalan dengan normal.
-                </p>
-                <div class="screenshot-placeholder">
-                  <img src="../ss/ss11.png" alt="ss11" />
-                </div>
-                <p class="step-description">
-                  Selanjutnya kita akan mencoba print hello world. Disini saya
-                  melakukannya dengan membuat route baru mengarah ke
-                  <code>/hello</code>.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss12.png" alt="ss12" />
-                  <img src="../ss/ss13.png" alt="ss13" />
+                  <img src="../ss/ss3-9.png" alt="ss9" />
                 </div>
               </div>
 
               <div class="step-item">
-                <span class="step-number">3. MVC Laravel</span>
-                <div class="screenshot-placeholder">
-                  <img src="../ss/ss16.png" alt="ss16" />
-                </div>
+                <span class="step-number"
+                  >2. Membuat model dengan relationship</span
+                >
                 <p class="step-description">
-                  Model <code>php artisan make: model sebuah-model</code>.
-                  Berfungsi untuk mengakses dan mengelola data atau database
-                  seperti query ke database, insert, update, delete dan
-                  lain-lain.
+                  Buat model untuk tabel major, student, dan subject dengan
+                  perintah
+                  <code>php artisan make:model major, student, subject</code>.
+                  Lalu kita buka file model yang sudah dibuat, lalu kita buat
+                  function untuk mendefinisikan relationship antar model. Lalu
+                  kita buat function agar masing masing model dapat mengakses
+                  data dari model lain yang berelasi dengan model tersebut.
                 </p>
-                <div class="screenshot-placeholder">
-                  <img src="../ss/ss14.png" alt="ss14" />
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-10.png" alt="ss10" />
+                  <img src="../ss/ss3-11.png" alt="ss11" />
+                  <img src="../ss/ss3-12.png" alt="ss12" />
+                  <img src="../ss/ss3-13.png" alt="ss13" />
+                  <img src="../ss/ss3-14.png" alt="ss14" />
+                  <img src="../ss/ss3-15.png" alt="ss15" />
                 </div>
-                <p class="step-description">
-                  View. Berfungsi sebagai tampilan atau interface aplikasi,
-                  untuk menampilkan data yang didapatkan dari suatu
-                  <code>model</code> melalui <code>controller</code>.
-                </p>
+              </div>
 
+              <div class="step-item">
+                <span class="step-number"
+                  >3. Membuat seeder untuk data sample</span
+                >
                 <p class="step-description">
-                  Controller. Berfungsi untuk menangani <code>request</code> dan
-                  <code>response</code>, menerima request dan memproses request
-                  kemudian mengembalikannya dalam bentuk data atau view dari
-                  suatu model.
+                  Pertama, seeder untuk tabel major, dengan perintah
+                  <code>php artisan make:seeder MajorSeeder</code>. Lalu
+                  tambahkan code pada foto berikut di function run() untuk
+                  mengisi data sample pada tabel major.
                 </p>
-                <div class="screenshot-placeholder">
-                  <img src="../ss/ss15.png" alt="ss15" />
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-16.png" alt="ss16" />
+                  <img src="../ss/ss3-17.png" alt="ss17" />
+                </div>
+                <p class="step-description">
+                  Selanjutnya, seeder untuk tabel subject, dengan perintah
+                  <code>php artisan make:seeder SubjectSeeder</code>. Lalu
+                  tambahkan code pada foto berikut di function run() untuk
+                  mengisi data sample pada tabel subject.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-18.png" alt="ss18" />
+                  <img src="../ss/ss3-19.png" alt="ss19" />
+                </div>
+                <p class="step-description">
+                  Selanjutnya, seeder untuk tabel student, dengan perintah
+                  <code>php artisan make:seeder StudentSeeder</code>. Lalu
+                  tambahkan code pada foto berikut di function run() untuk
+                  mengisi data sample pada tabel student.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-20.png" alt="ss20" />
+                  <img src="../ss/ss3-21.png" alt="ss21" />
+                </div>
+                <p class="step-description">
+                  Selanjutnya, kita melakukan update pada file
+                  DatabaseSeeder.php untuk memanggil seeder yang sudah dibuat,
+                  lalu kita jalankan perintah
+                  <code>php artisan db:seed</code> untuk menjalankan seeder dan
+                  mengisi data sample ke dalam tabel di database.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-22.png" alt="ss22" />
+                  <img src="../ss/ss3-23.png" alt="ss23" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">4. Membuat Controller</span>
+                <p class="step-description">
+                  Proses pembuatan controller diawali dengan menjalankan
+                  perintah php artisan make:controller StudentController pada
+                  terminal untuk membuat sebuah resource controller khusus bagi
+                  entitas Student. Setelah berkas berhasil digenerasikan,
+                  beberapa fungsi operasi CRUD (Create, Read, Update, Delete)
+                  ditambahkan ke dalam StudentController guna mengelola data
+                  mahasiswa secara terstruktur. Fungsi-fungsi tersebut meliputi
+                  index() untuk menampilkan daftar keseluruhan mahasiswa, show()
+                  untuk menyajikan detail informasi dari seorang mahasiswa
+                  secara spesifik, serta create() dan store() yang masing-masing
+                  berfungsi untuk menampilkan formulir dan menyimpan data
+                  mahasiswa baru ke basis data. Sementara itu, untuk proses
+                  perubahan data, fungsi edit() digunakan untuk menampilkan
+                  formulir pengeditan dan update() untuk memperbarui data yang
+                  telah diubah, yang kemudian diakhiri dengan fungsi destroy()
+                  untuk menangani aksi penghapusan data mahasiswa dari sistem.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-24.png" alt="ss24" />
+                  <img src="../ss/ss3-25.png" alt="ss25" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">5. Membuat Route</span>
+                <p class="step-description">
+                  Tambahkan route untuk resource student pada file web.php
+                  dengan perintah
+                  <code
+                    >Route::resource('students', StudentController::class)</code
+                  >.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-26.png" alt="ss26" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">5. Membuat View</span>
+                <p class="step-description">
+                  Kita buat view untuk layout utama, index, create.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-27.png" alt="ss27" />
+                  <img src="../ss/ss3-28.png" alt="ss28" />
+                  <img src="../ss/ss3-29.png" alt="ss29" />
+                </div>
+                <p class="step-description">
+                  Berikut adalah hasil dari project yang kita buat.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-30.png" alt="ss30" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number"
+                  >6. Latihan dan Tugas (Query dgn Relationship)</span
+                >
+                <p class="step-description">
+                  Kita diminta untuk membuat query untuk menampilkan: 1.Semua
+                  mahasiswa beserta jurusan dan mata kuliahnya; 2.Jurusan yang
+                  memiliki mahasiswa terbanyak; 3.Mata kuliah yang diambil oleh
+                  mahasiswa tertentu; 4.Total SKS yang diambil setiap mahasiswa.
+                  Disini aku membuat function pada studentcontroller untuk
+                  setiap nomor latihan. juga kita buatkan route dan view agar
+                  function tersebut dapat diakses melalui url.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-31.png" alt="ss31" />
+                  <img src="../ss/ss3-32.png" alt="ss32" />
+                </div>
+                <p class="step-description">
+                  Latihan 1,
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-33.png" alt="ss33" />
+                </div>
+                <p class="step-description">
+                  Latihan 2,
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-34.png" alt="ss34" />
+                </div>
+                <p class="step-description">
+                  Latihan 3,
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-35.png" alt="ss35" />
+                </div>
+                <p class="step-description">
+                  Latihan 4,
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss3-36.png" alt="ss36" />
                 </div>
               </div>
             </section>
