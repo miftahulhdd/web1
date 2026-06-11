@@ -76,17 +76,13 @@
             <section>
               <h2 class="section-title">Pendahuluan</h2>
               <p class="intro-text">
-                Praktikum ini bertujuan untuk memberikan pemahaman mendalam
-                mengenai konsep relasi antar-tabel (relationship) di dalam
-                framework Laravel, serta mengimplementasikannya secara nyata
-                melalui hubungan One-to-Many dan Many-to-Many. Selain memetakan
-                hubungan antar-objek di tingkat basis data menggunakan migration
-                yang dilengkapi dengan foreign key, praktikum ini juga melatih
-                penggunaan fitur Eloquent Relationship untuk melakukan query
-                data secara efisien. Pada tahap akhir, mahasiswa diharapkan
-                mampu mengintegrasikan alur data tersebut untuk kemudian
-                menampilkan informasi yang saling berelasi secara dinamis ke
-                dalam halaman antarmuka (view).
+                Praktikum ini bertujuan untuk mempelajari implementasi antarmuka
+                aplikasi menggunakan Laravel UI dan Bootstrap pada studi kasus
+                Sistem Informasi Sekolah. Selain memanfaatkan fitur
+                authentication bawaan Laravel, praktikum ini juga membahas
+                proses kustomisasi tabel users, penggunaan template SB Admin 2,
+                penerapan Blade Templating, pembuatan layout global, hingga
+                implementasi fitur CRUD untuk manajemen pengguna.
               </p>
               <a
                 class="link-text"
@@ -245,38 +241,36 @@
               <h2 class="section-title">Langkah Kerja</h2>
 
               <div class="step-item">
-                <span class="step-number"
-                  >1. Membuat migration untuk tabel</span
-                >
+                <span class="step-number">1. Membuat project laravel baru</span>
                 <p class="step-description">
-                  Pertama kita buat migration untuk tabel major, dengan perintah
-                  <code>php artisan make:migration create_majors_table</code>.
-                  Lalu kita buka file migration yang sudah dibuat, lalu kita
-                  buat field-fieldnya, disini aku membuat field id, name, dan
-                  timestamps.
+                  Pertama kita buat project laravel baru dengan perintah
+                  <code
+                    >create project laravel/laravel laravel-sisfo
+                    --prefer-dist</code
+                  >. Maka akan keluar output berikut. setelah itu kita jalankan
+                  saja porject dengan perintah <code>php artisan serve</code>.
                 </p>
                 <div class="screenshot-group">
-                  <img src="../ss/ss3-1.png" alt="ss1" />
-                  <img src="../ss/ss3-2.png" alt="ss2" />
+                  <img src="../ss/ss41.png" alt="ss1" />
                 </div>
               </div>
 
               <div class="step-item">
-                <!-- <span class="step-number"
-                  >2. Membuat migration untuk tabel student</span
-                > -->
+                <span class="step-number">2. Check dan menyamakan detail pada file .env dan instalasi package laravel/ui</span>
                 <p class="step-description">
-                  Selanjutnya kita buat migration untuk tabel student, dengan
-                  perintah
-                  <code>php artisan make:migration create_students_table</code>.
-                  Lalu kita buka file migration yang sudah dibuat, lalu kita
-                  buat field-fieldnya, disini aku membuat field id, name,
-                  major_id, dan timestamps. Disini kita buat field major_id
-                  sebagai foreign key yang mengarah ke tabel majors.
+                  Pertama kita check dan samakan detail pada file .env dengan
+                  database yang kita gunakan, disini kita menggunakan mysql dengan
+                  nama database laravel-sisfo. Setelah itu kita install package
+                  laravel/ui dengan perintah
+                  <code>composer require laravel/ui</code>. Setelah itu kita
+                  jalankan perintah untuk generate auth scaffolding dengan
+                  perintah <code>php artisan ui bootstrap --auth</code>.
                 </p>
                 <div class="screenshot-group">
-                  <img src="../ss/ss3-3.png" alt="ss3" />
-                  <img src="../ss/ss3-4.png" alt="ss4" />
+                  <img src="../ss/ss42.png" alt="ss3" />
+                  <img src="../ss/ss43.png" alt="ss4" />
+                  <img src="../ss/ss44.png" alt="ss4" />
+                  <img src="../ss/ss45.png" alt="ss4" />
                 </div>
                 <p class="step-description">
                   Selanjutnya membuat migration untuk tabel subject, dengan
@@ -459,27 +453,19 @@
                   <img src="../ss/ss3-31.png" alt="ss31" />
                   <img src="../ss/ss3-32.png" alt="ss32" />
                 </div>
-                <p class="step-description">
-                  Latihan 1,
-                </p>
+                <p class="step-description">Latihan 1,</p>
                 <div class="screenshot-group">
                   <img src="../ss/ss3-33.png" alt="ss33" />
                 </div>
-                <p class="step-description">
-                  Latihan 2,
-                </p>
+                <p class="step-description">Latihan 2,</p>
                 <div class="screenshot-group">
                   <img src="../ss/ss3-34.png" alt="ss34" />
                 </div>
-                <p class="step-description">
-                  Latihan 3,
-                </p>
+                <p class="step-description">Latihan 3,</p>
                 <div class="screenshot-group">
                   <img src="../ss/ss3-35.png" alt="ss35" />
                 </div>
-                <p class="step-description">
-                  Latihan 4,
-                </p>
+                <p class="step-description">Latihan 4,</p>
                 <div class="screenshot-group">
                   <img src="../ss/ss3-36.png" alt="ss36" />
                 </div>
