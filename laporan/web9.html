@@ -256,12 +256,15 @@
               </div>
 
               <div class="step-item">
-                <span class="step-number">2. Check dan menyamakan detail pada file .env dan instalasi package laravel/ui</span>
+                <span class="step-number"
+                  >2. Check dan menyamakan detail pada file .env dan instalasi
+                  package laravel/ui</span
+                >
                 <p class="step-description">
                   Pertama kita check dan samakan detail pada file .env dengan
-                  database yang kita gunakan, disini kita menggunakan mysql dengan
-                  nama database laravel-sisfo. Setelah itu kita install package
-                  laravel/ui dengan perintah
+                  database yang kita gunakan, disini kita menggunakan mysql
+                  dengan nama database laravel-sisfo. Setelah itu kita install
+                  package laravel/ui dengan perintah
                   <code>composer require laravel/ui</code>. Setelah itu kita
                   jalankan perintah untuk generate auth scaffolding dengan
                   perintah <code>php artisan ui bootstrap --auth</code>.
@@ -273,148 +276,114 @@
                   <img src="../ss/ss45.png" alt="ss4" />
                 </div>
                 <p class="step-description">
-                  Selanjutnya membuat migration untuk tabel subject, dengan
-                  perintah
-                  <code>php artisan make:migration create_subjects_table</code>.
-                  Lalu kita buka file migration yang sudah dibuat, lalu kita
-                  buat field-fieldnya.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss3-5.png" alt="ss5" />
-                  <img src="../ss/ss3-6.png" alt="ss6" />
-                </div>
-                <p class="step-description">
-                  Selanjutnya kita buat migration untuk tabel pivot
-                  student_subject, dengan perintah
-                  <code
-                    >php artisan make:migration
-                    create_student_subject_table</code
-                  >. Lalu kita buka file migration yang sudah dibuat, lalu kita
-                  buat field-fieldnya, disini aku membuat field student_id dan
-                  subject_id sebagai foreign key yang mengarah ke tabel students
-                  dan subjects.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss3-7.png" alt="ss7" />
-                  <img src="../ss/ss3-8.png" alt="ss8" />
-                </div>
-                <p class="step-description">
-                  Terakhir kita jalankan perintah
-                  <code>php artisan migrate</code> untuk menjalankan migration
-                  dan membuat tabel di database.
-                </p>
-                <div class="screenshot-placeholder">
-                  <img src="../ss/ss3-9.png" alt="ss9" />
-                </div>
-              </div>
-
-              <div class="step-item">
-                <span class="step-number"
-                  >2. Membuat model dengan relationship</span
-                >
-                <p class="step-description">
-                  Buat model untuk tabel major, student, dan subject dengan
-                  perintah
-                  <code>php artisan make:model major, student, subject</code>.
-                  Lalu kita buka file model yang sudah dibuat, lalu kita buat
-                  function untuk mendefinisikan relationship antar model. Lalu
-                  kita buat function agar masing masing model dapat mengakses
-                  data dari model lain yang berelasi dengan model tersebut.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss3-10.png" alt="ss10" />
-                  <img src="../ss/ss3-11.png" alt="ss11" />
-                  <img src="../ss/ss3-12.png" alt="ss12" />
-                  <img src="../ss/ss3-13.png" alt="ss13" />
-                  <img src="../ss/ss3-14.png" alt="ss14" />
-                  <img src="../ss/ss3-15.png" alt="ss15" />
-                </div>
-              </div>
-
-              <div class="step-item">
-                <span class="step-number"
-                  >3. Membuat seeder untuk data sample</span
-                >
-                <p class="step-description">
-                  Pertama, seeder untuk tabel major, dengan perintah
-                  <code>php artisan make:seeder MajorSeeder</code>. Lalu
-                  tambahkan code pada foto berikut di function run() untuk
-                  mengisi data sample pada tabel major.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss3-16.png" alt="ss16" />
-                  <img src="../ss/ss3-17.png" alt="ss17" />
-                </div>
-                <p class="step-description">
-                  Selanjutnya, seeder untuk tabel subject, dengan perintah
-                  <code>php artisan make:seeder SubjectSeeder</code>. Lalu
-                  tambahkan code pada foto berikut di function run() untuk
-                  mengisi data sample pada tabel subject.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss3-18.png" alt="ss18" />
-                  <img src="../ss/ss3-19.png" alt="ss19" />
-                </div>
-                <p class="step-description">
-                  Selanjutnya, seeder untuk tabel student, dengan perintah
-                  <code>php artisan make:seeder StudentSeeder</code>. Lalu
-                  tambahkan code pada foto berikut di function run() untuk
-                  mengisi data sample pada tabel student.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss3-20.png" alt="ss20" />
-                  <img src="../ss/ss3-21.png" alt="ss21" />
-                </div>
-                <p class="step-description">
-                  Selanjutnya, kita melakukan update pada file
-                  DatabaseSeeder.php untuk memanggil seeder yang sudah dibuat,
-                  lalu kita jalankan perintah
-                  <code>php artisan db:seed</code> untuk menjalankan seeder dan
-                  mengisi data sample ke dalam tabel di database.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss3-22.png" alt="ss22" />
-                  <img src="../ss/ss3-23.png" alt="ss23" />
-                </div>
-              </div>
-
-              <div class="step-item">
-                <span class="step-number">4. Membuat Controller</span>
-                <p class="step-description">
-                  Proses pembuatan controller diawali dengan menjalankan
-                  perintah php artisan make:controller StudentController pada
-                  terminal untuk membuat sebuah resource controller khusus bagi
-                  entitas Student. Setelah berkas berhasil digenerasikan,
-                  beberapa fungsi operasi CRUD (Create, Read, Update, Delete)
-                  ditambahkan ke dalam StudentController guna mengelola data
-                  mahasiswa secara terstruktur. Fungsi-fungsi tersebut meliputi
-                  index() untuk menampilkan daftar keseluruhan mahasiswa, show()
-                  untuk menyajikan detail informasi dari seorang mahasiswa
-                  secara spesifik, serta create() dan store() yang masing-masing
-                  berfungsi untuk menampilkan formulir dan menyimpan data
-                  mahasiswa baru ke basis data. Sementara itu, untuk proses
-                  perubahan data, fungsi edit() digunakan untuk menampilkan
-                  formulir pengeditan dan update() untuk memperbarui data yang
-                  telah diubah, yang kemudian diakhiri dengan fungsi destroy()
-                  untuk menangani aksi penghapusan data mahasiswa dari sistem.
-                </p>
-                <div class="screenshot-group">
-                  <img src="../ss/ss3-24.png" alt="ss24" />
-                  <img src="../ss/ss3-25.png" alt="ss25" />
-                </div>
-              </div>
-
-              <div class="step-item">
-                <span class="step-number">5. Membuat Route</span>
-                <p class="step-description">
-                  Tambahkan route untuk resource student pada file web.php
+                  Selanjutnya kita jalankan migration untuk membuat tabel users,
                   dengan perintah
-                  <code
-                    >Route::resource('students', StudentController::class)</code
-                  >.
+                  <code>php artisan migrate</code>. Maka akan keluar output
+                  berikut.
                 </p>
                 <div class="screenshot-group">
-                  <img src="../ss/ss3-26.png" alt="ss26" />
+                  <img src="../ss/ss46.png" alt="ss5" />
+                </div>
+                <p class="step-description">
+                  Kita sudah dapat mengakses halaman register, dashboard, dan
+                  login. Dan tampilannya sudah seperti berikut
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss47.png" alt="ss7" />
+                  <img src="../ss/ss48.png" alt="ss8" />
+                  <img src="../ss/ss49.png" alt="ss8" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">3. Migrate custom tabel user</span>
+                <p class="step-description">
+                  Dari sturktur tabel user kita perlu menambahkan beberapa
+                  field, maka perlu membuat migration baru dengan perintah
+                  <code>php artisan make:migration custom_table_user</code>.
+                  Setelah itu kita edit file yang baru saja dibuat tersebut
+                  seperti gambar dibawah.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss410.png" alt="ss10" />
+                  <img src="../ss/ss411.png" alt="ss11" />
+                  <img src="../ss/ss412.png" alt="ss12" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <p class="step-description">
+                  Jalankan perintah <code>php artisan migrate</code> untuk
+                  menjalankan migration dan membuat field baru pada tabel user
+                  di database. Maka akan keluar output berikut.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss413.png" alt="ss10" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">3. Seeding User</span>
+                <p class="step-description">
+                  Setelah berhasil melakukan costum table users selanjutnya
+                  membuat user menggunakan fitur seeding pada Laravel, buat
+                  seeder dengan nama AdminSeeder dengan perintah
+                  <code>php artisan make:seeder AdminSeeder</code> maka secara
+                  otomatis file AdminSeeder.php akan dibuat pada folder
+                  database/Seeder. Kemudian buka file tersebut dan buat akun
+                  admin seperti kode program berikut. Lalu edit fungsi run()
+                  pada file AdminSeeder seperti pada gambar dibawah.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss415.png" alt="ss16" />
+                  <img src="../ss/ss414.png" alt="ss17" />
+                </div>
+                <p class="step-description">
+                  Selanjutnya, untuk menjalankan seeding, kita jalankan perintah
+                  <code>php artisan db:seed --class=AdminSeeder</code> dan jika
+                  berhasil maka akan keluar output berikut.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss416.png" alt="ss18" />
+                </div>
+                <p class="step-description">
+                  Jika sudah selesai menjalankan seeder, maka kita sudah dapat
+                  login menggunakan akun admin yg dibuat tadi.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss417.png" alt="ss18" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">4. Templating atau Layouting</span>
+                <p class="step-description">
+                  Setelah proses autentikasi Laravel berhasil menggenerasi
+                  tampilan dashboard bawaan, langkah berikutnya adalah
+                  mengonfigurasi antarmuka aplikasi agar sesuai dengan template
+                  pilihan. Pada studi kasus ini, kita akan menggunakan template
+                  SB Admin 2 yang berbasis framework Bootstrap. Setelah di
+                  download melalui link
+                  https://startbootstrap.com/theme/sb-admin-2 lalu diekstrak
+                  file-nya. Selanjutnya, kita buat folder baru bernama sbadmin
+                  di dalam direktori public proyek Laravel kita, kemudian
+                  copy-paste seluruh aset template ke dalam folder tersebut.
+                </p>
+              </div>
+
+              <div class="step-item">
+                <p class="step-description">
+                  Selanjutnya kita buat code untuk halaman login di file
+                  app.blade.php yang ada dalam folder view/layouts. Menjadi seperti berikut,
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss418.png" alt="ss26" />
+                </div>
+                <p class="step-description">
+                  Maka nanti tampilan login kita akan menjadi seperti ini,
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/ss419.png" alt="ss26" />
                 </div>
               </div>
 
