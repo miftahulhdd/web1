@@ -62,45 +62,32 @@
           A showcase of my projects and creative works.
         </p>
 
-        <!-- filter tabs lagi mati -->
+        <!-- filter tabs -->
         <ul
           class="nav nav-pills justify-content-center mb-4 flex-wrap gap-1"
           id="portfolioTabs"
         >
           <li class="nav-item">
-            <button
-              class="nav-link active rounded-pill text-muted-50 bg-light-subtle"
-              style="opacity: 0.6; cursor: not-allowed"
-              disabled
-            >
+            <button class="nav-link active rounded-pill" data-category="all">
               All
             </button>
           </li>
           <li class="nav-item">
             <button
-              class="nav-link rounded-pill text-muted-50 bg-light-subtle"
-              style="opacity: 0.6; cursor: not-allowed"
-              disabled
+              class="nav-link rounded-pill"
+              data-category="web-programming"
             >
-              Design
+              Web Programming
             </button>
           </li>
           <li class="nav-item">
-            <button
-              class="nav-link rounded-pill text-muted-50 bg-light-subtle"
-              style="opacity: 0.6; cursor: not-allowed"
-              disabled
-            >
-              Web
+            <button class="nav-link rounded-pill" data-category="mobile-app">
+              Mobile App
             </button>
           </li>
           <li class="nav-item">
-            <button
-              class="nav-link rounded-pill text-muted-50 bg-light-subtle"
-              style="opacity: 0.6; cursor: not-allowed"
-              disabled
-            >
-              Photography
+            <button class="nav-link rounded-pill" data-category="big-data">
+              Big Data
             </button>
           </li>
         </ul>
@@ -108,7 +95,10 @@
         <!-- portfolio grid: 2 kolom di mobile, 3 di desktop -->
         <div class="row g-3" id="portfolioGrid">
           <!-- Laporan Praktikum 6 -->
-          <div class="col-12 col-md-6 col-lg-4 portfolio-item">
+          <div
+            class="col-12 col-md-6 col-lg-4 portfolio-item"
+            data-category="web-programming"
+          >
             <div
               class="card h-100 portfolio-card border-0 shadow-sm rounded-4 overflow-hidden"
             >
@@ -137,7 +127,10 @@
             </div>
           </div>
           <!-- Laporan Praktikum 7 -->
-          <div class="col-12 col-md-6 col-lg-4 portfolio-item">
+          <div
+            class="col-12 col-md-6 col-lg-4 portfolio-item"
+            data-category="web-programming"
+          >
             <div
               class="card h-100 portfolio-card border-0 shadow-sm rounded-4 overflow-hidden"
             >
@@ -164,7 +157,10 @@
             </div>
           </div>
           <!-- Laporan Praktikum 8 -->
-          <div class="col-12 col-md-6 col-lg-4 portfolio-item">
+          <div
+            class="col-12 col-md-6 col-lg-4 portfolio-item"
+            data-category="web-programming"
+          >
             <div
               class="card h-100 portfolio-card border-0 shadow-sm rounded-4 overflow-hidden"
             >
@@ -193,7 +189,10 @@
             </div>
           </div>
           <!-- Laporan Praktikum 9 -->
-          <div class="col-12 col-md-6 col-lg-4 portfolio-item">
+          <div
+            class="col-12 col-md-6 col-lg-4 portfolio-item"
+            data-category="web-programming"
+          >
             <div
               class="card h-100 portfolio-card border-0 shadow-sm rounded-4 overflow-hidden"
             >
@@ -214,6 +213,68 @@
                 </p>
                 <a
                   href="laporan/web9.html"
+                  class="btn btn-primary px-4 rounded-pill fw-semibold"
+                >
+                  <i class="bi bi-arrow-down-right-circle-fill me-2"></i> Open
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Laporan Praktikum AppMobile 1 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 portfolio-item"
+            data-category="mobile-app"
+          >
+            <div
+              class="card h-100 portfolio-card border-0 shadow-sm rounded-4 overflow-hidden"
+            >
+              <img
+                src="assets/portfolio-4.jpg"
+                class="card-img-top"
+                style="height: 180px; object-fit: cover"
+                alt="Laporan Praktikum 1"
+              />
+              <div class="card-body p-4">
+                <div class="mb-2">
+                  <span class="course-badge">Mobile App</span>
+                  <!-- <span class="badge bg-primary px-3 py-2 rounded-pill">Pemrograman Web</span> -->
+                </div>
+                <h5 class="card-title fw-bold mb-2">Laporan Praktikum 1</h5>
+                <p class="card-text text-muted small mb-4">FLutter Widget.</p>
+                <a
+                  href="laporan/mobapp1.html"
+                  class="btn btn-primary px-4 rounded-pill fw-semibold"
+                >
+                  <i class="bi bi-arrow-down-right-circle-fill me-2"></i> Open
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Laporan Praktikum AppMobile 2 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 portfolio-item"
+            data-category="mobile-app"
+          >
+            <div
+              class="card h-100 portfolio-card border-0 shadow-sm rounded-4 overflow-hidden"
+            >
+              <img
+                src="assets/portfolio-2.jpg"
+                class="card-img-top"
+                style="height: 180px; object-fit: cover"
+                alt="Laporan Praktikum 2"
+              />
+              <div class="card-body p-4">
+                <div class="mb-2">
+                  <span class="course-badge">Mobile App</span>
+                  <!-- <span class="badge bg-primary px-3 py-2 rounded-pill">Pemrograman Web</span> -->
+                </div>
+                <h5 class="card-title fw-bold mb-2">Laporan Praktikum 2</h5>
+                <p class="card-text text-muted small mb-4">
+                  FLutter Something.
+                </p>
+                <a
+                  href="laporan/mobapp2.html"
                   class="btn btn-primary px-4 rounded-pill fw-semibold"
                 >
                   <i class="bi bi-arrow-down-right-circle-fill me-2"></i> Open
