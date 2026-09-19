@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>report mobapp1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style-laporan.css" />
+  </head>
+  <body>
+    <!-- <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+      <div id="devToast" class="custom-toast">
+        🚧 This site is still a work in progress :)
+      </div>
+    </div> -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div
+        class="container-fluid px-3 px-lg-5 d-flex justify-content-between align-items-center"
+      >
+        <a class="navbar-brand fw-semibold" href="#">miftahulhdd</a>
+
+        <div class="d-none d-md-block mx-auto">
+          <span
+            class="text-muted fw-medium text-uppercase small tracking-widest"
+            >Laboratory Report</span
+          >
+        </div>
+
+        <div class="navbar-nav ms-auto ms-md-0 fw-semibold">
+          <a class="nav-link mx-1" href="../index.html">Home</a>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- main content start -->
+    <main class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-11">
+          <div class="report-container">
+            <!-- back button -->
+            <a href="../portofolio.html" class="back-btn">
+              <i class="bi bi-arrow-left"></i> Kembali ke Portofolio
+            </a>
+
+            <!-- badge -->
+            <div class="mb-2">
+              <span class="course-badge">Mobile App</span>
+            </div>
+
+            <!-- date -->
+            <div class="publish-date">Published on: 19 September 2026</div>
+
+            <!-- title -->
+            <h1 class="article-title">
+              Laporan Praktikum 2: Pengenalan Widget serta Layouting &amp; Styling pada Flutter
+            </h1>
+
+            <!-- pendahuluan -->
+            <section>
+              <h2 class="section-title">Pendahuluan</h2>
+              <p class="intro-text">
+                Laporan ini merangkum dua modul praktikum mata kuliah Aplikasi
+                Mobile berbasis Flutter. Modul pertama membahas pengenalan
+                widget dasar, yaitu perbedaan antara StatelessWidget dan
+                StatefulWidget beserta penerapan manajemen state sederhana
+                menggunakan setState(). Modul kedua membahas layouting dan
+                styling menggunakan widget Row, Column, Container, serta
+                ListTile untuk menyusun tampilan dashboard aplikasi pencatat
+                keuangan (Expense Tracker).
+                <br />
+                <br />
+                Kedua modul ini saling berkaitan karena widget-widget dasar
+                yang dipelajari pada modul pertama (GreetingWidget dan
+                BalanceCardWidget) kemudian digabungkan dengan komponen baru
+                pada modul kedua (ActionButtonsWidget dan
+                RecentTransactionsWidget) menjadi satu halaman dashboard yang
+                utuh dan dapat di-scroll.
+              </p>
+              <a class="link-text" href="https://github.com/miftahulhdd/PrakAppMob_B_2411533005" target="_blank">Repository Github</a>
+            </section>
+
+            <!-- ===================== MODUL 1 ===================== -->
+            <section>
+              <h2 class="section-title">Modul 1: Pengenalan Widgets (Stateless, Stateful, &amp; Manajemen State Dasar)</h2>
+
+              <h3 class="subsection-title" style="margin-top: 1rem;">Teori</h3>
+              <div class="list-group list-group-custom">
+                <div class="list-group-item">
+                  <strong>Stateless Widget:</strong> Widget statis yang
+                  tampilannya tidak pernah berubah setelah dirender di layar,
+                  tidak memiliki data internal yang berubah (state), sehingga
+                  lebih ringan dan cepat. Contoh: label teks, ikon, gambar
+                  statis.
+                </div>
+                <div class="list-group-item">
+                  <strong>Stateful Widget:</strong> Widget dinamis yang
+                  tampilannya dapat berubah sebagai respons terhadap interaksi
+                  pengguna atau data baru. Widget ini menyimpan objek data
+                  internal (state) dan dapat merender ulang UI melalui
+                  setState(). Contoh: form input, checkbox, animasi.
+                </div>
+                <div class="list-group-item">
+                  <strong>setState():</strong> Fungsi yang digunakan untuk
+                  memberi tahu Flutter bahwa ada perubahan data pada
+                  StatefulWidget, sehingga UI perlu dirender ulang agar
+                  perubahan tersebut tampil di layar.
+                </div>
+              </div>
+
+              <h3 class="subsection-title" style="margin-top: 1.5rem;">Langkah-Langkah</h3>
+
+              <div class="step-item">
+                <span class="step-number">1. Membuat Widget Sapaan (Stateless)</span>
+                <p class="step-description">
+                  Membuat header statis bernama 'GreetingWidget' yang meng-extend
+                  'StatelessWidget' untuk menampilkan nama pengguna beserta ikon
+                  avatar. Digunakan 'Row' untuk menyusun elemen dari kiri ke
+                  kanan (avatar dan teks sapaan), serta 'Column' di dalamnya
+                  untuk menumpuk dua baris teks sapaan secara vertikal.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh1.png" alt="modul1-langkah1" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">2. Membuat Kartu Saldo (Stateful)</span>
+                <p class="step-description">
+                  Karena kartu saldo harus dapat bereaksi saat ikon mata
+                  ditekan, widget ini dibuat sebagai 'StatefulWidget' bernama
+                  'BalanceCardWidget'. Class state-nya, '_BalanceCardWidgetState',
+                  menyimpan variabel boolean '_isBalanceVisible' untuk status
+                  tampil/sensor saldo, serta nilai nominal saldo yang akan
+                  ditampilkan.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh2.png" alt="modul1-langkah2" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">3. Menerapkan Interaktivitas (setState)</span>
+                <p class="step-description">
+                  Menambahkan 'IconButton' pada kartu saldo dengan ikon mata
+                  ('visibility' / 'visibility_off') yang berubah sesuai
+                  kondisi. Pada properti 'onPressed', dipanggil method
+                  'setState()' untuk membalik nilai boolean '_isBalanceVisible',
+                  sehingga tampilan nominal saldo berganti antara angka asli
+                  dan tanda sensor ('*********') menggunakan operator ternary.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh3.png" alt="modul1-langkah3" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">4. Hasil Akhir</span>
+                <p class="step-description">
+                  Menggabungkan 'GreetingWidget' (Stateless) dan
+                  'BalanceCardWidget' (Stateful) ke dalam satu 'Scaffold' utama
+                  yang dibungkus 'Padding'. Hasilnya, sapaan statis tampil di
+                  bagian atas, sedangkan kartu saldo di bawahnya dapat
+                  merespons ketukan pada ikon mata untuk menyembunyikan atau
+                  menampilkan nominal saldo.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh5.png" alt="modul1-hasil-akhir" />
+                  <img src="../ss/appmob/2lkh4.png" alt="modul1-hasil-akhir" />
+                  <img src="../ss/appmob/2lkh6.png" alt="modul1-hasil-akhir" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">5. Latihan/Tugas</span>
+                <p class="step-description">
+                  <strong>Tugas 1 - Styling:</strong> Mengubah warna tema pada
+                  'BalanceCardWidget' dari biru ('Colors.blueAccent') menjadi
+                  hijau emerald ('Colors.teal') pada properti 'color' di
+                  widget 'Card'.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh7.png" alt="modul1-tugas1" />
+                </div>
+                <p class="step-description">
+                  <strong>Tugas 2 - Modifikasi UI:</strong> Menambahkan teks
+                  statis "No. Rekening: 1234-5678" di bagian bawah nominal
+                  saldo di dalam kartu, menggunakan widget 'Text' tambahan
+                  setelah teks nominal saldo pada 'Column'.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh8.png" alt="modul1-tugas2" />
+                </div>
+              </div>
+            </section>
+
+            <!-- ===================== MODUL 2 ===================== -->
+            <section>
+              <h2 class="section-title">Modul 2: Layouting &amp; Styling (Row, Column, Container, dan ListTile)</h2>
+
+              <h3 class="subsection-title" style="margin-top: 1rem;">Teori</h3>
+              <div class="list-group list-group-custom">
+                <div class="list-group-item">
+                  <strong>Row:</strong> Widget yang menyusun elemen anak
+                  secara menyamping, dari kiri ke kanan (horizontal).
+                </div>
+                <div class="list-group-item">
+                  <strong>Column:</strong> Widget yang menyusun elemen anak
+                  secara menurun, dari atas ke bawah (vertikal).
+                </div>
+                <div class="list-group-item">
+                  <strong>Container:</strong> Widget berupa kotak yang dapat
+                  diatur margin, padding, warna, dan batasnya (border).
+                </div>
+                <div class="list-group-item">
+                  <strong>ListTile:</strong> Widget bawaan Material Design
+                  untuk membuat baris daftar secara instan, terdiri dari
+                  'leading' (elemen paling kiri seperti ikon/avatar), 'title'
+                  (judul utama baris), dan 'trailing' (elemen paling kanan
+                  seperti nominal/tombol).
+                </div>
+              </div>
+
+              <h3 class="subsection-title" style="margin-top: 1.5rem;">Langkah-Langkah</h3>
+
+              <div class="step-item">
+                <span class="step-number">1. Menyusun Tombol Aksi (Row)</span>
+                <p class="step-description">
+                  Membuat 'ActionButtonsWidget' yang meng-extend
+                  'StatelessWidget' menggunakan 'Row' untuk meletakkan tombol
+                  Pemasukan, Pengeluaran, dan Transfer sejajar secara
+                  horizontal. Properti 'mainAxisAlignment' diset ke
+                  'MainAxisAlignment.spaceEvenly' agar jarak antar tombol
+                  terbagi rata. Setiap tombol dibangun melalui fungsi
+                  pembantu '_buildActionButton' yang membungkus ikon dengan
+                  'Container' berwarna transparan sesuai kategori transaksi.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh9.png" alt="modul2-langkah1" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">2. Menyusun Riwayat (Column + ListTile)</span>
+                <p class="step-description">
+                  Membuat 'RecentTransactionsWidget' menggunakan 'Column'
+                  dengan 'crossAxisAlignment.start' untuk menumpuk teks judul
+                  "Transaksi Terakhir" dan daftar transaksi. Setiap item
+                  transaksi disusun menggunakan 'ListTile' berturut-turut di
+                  dalam sebuah 'Card', dengan 'leading' berupa 'CircleAvatar'
+                  berikon, 'title' berupa nama transaksi, 'subtitle' berupa
+                  tanggal, dan 'trailing' berupa nominal transaksi.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh10.png" alt="modul2-langkah2" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">3. Integrasi Dashboard (Scrollable)</span>
+                <p class="step-description">
+                  Menggabungkan seluruh komponen dari Modul 1
+                  ('GreetingWidget' dan 'BalanceCardWidget') dan Modul 2
+                  ('ActionButtonsWidget' dan 'RecentTransactionsWidget') ke
+                  dalam satu 'Column' di dalam 'Scaffold'. Seluruh konten
+                  dibungkus dengan 'SingleChildScrollView' agar layar tidak
+                  mengalami overflow ketika daftar transaksi bertambah
+                  panjang, serta diberi 'Padding' agar memiliki jarak dari
+                  tepi layar.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh11.png" alt="modul2-langkah3" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">4. Hasil Akhir</span>
+                <p class="step-description">
+                  Setelah semua widget digabungkan, dihasilkan sebuah mockup
+                  dashboard aplikasi Expense Tracker yang menampilkan sapaan
+                  pengguna, kartu total saldo yang dapat disembunyikan,
+                  deretan tombol aksi (Masuk, Keluar, Transfer), serta daftar
+                  transaksi terakhir yang rapi dan dapat di-scroll.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh14.png" alt="modul2-hasil-akhir" />
+                  <img src="../ss/appmob/2lkh13.png" alt="modul2-hasil-akhir" />
+                  <img src="../ss/appmob/2lkh12.png" alt="modul2-hasil-akhir" />
+                  <img src="../ss/appmob/2lkh15.png" alt="modul2-hasil-akhir" />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">5. Latihan/Tugas</span>
+                <p class="step-description">
+                  <strong>Tugas 1 - Styling:</strong> Pada widget daftar
+                  transaksi ('ListTile'), mengubah warna teks 'trailing'
+                  untuk transaksi pengeluaran menjadi merah ('Colors.red') dan
+                  transaksi pemasukan menjadi hijau ('Colors.green') melalui
+                  properti 'TextStyle(color: ...)'.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh16.png" alt="modul2-tugas1" />
+                </div>
+                <p class="step-description">
+                  <strong>Tugas 2 - Tambah Data:</strong> Menambahkan dua
+                  transaksi fiktif baru ke dalam daftar "Transaksi Terakhir"
+                  dengan menyisipkan dua 'ListTile' tambahan (beserta
+                  'Divider' pemisah) di bawah kode transaksi yang sudah ada
+                  pada 'RecentTransactionsWidget'.
+                </p>
+                <div class="screenshot-group">
+                  <img src="../ss/appmob/2lkh17.png" alt="modul2-tugas2" />
+                  <img src="../ss/appmob/2lkh18.png" alt="modul2-tugas2" />
+                </div>
+              </div>
+            </section>
+
+            <div class="report-internal-footer">
+              <hr />
+              <div class="copyright text-muted">
+                &copy;2026 miftahulhdd. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main content end -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
