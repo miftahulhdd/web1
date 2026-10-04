@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>report mobapp1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style-laporan.css" />
+  </head>
+  <body>
+    <!-- <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+      <div id="devToast" class="custom-toast">
+        🚧 This site is still a work in progress :)
+      </div>
+    </div> -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div
+        class="container-fluid px-3 px-lg-5 d-flex justify-content-between align-items-center"
+      >
+        <a class="navbar-brand fw-semibold" href="#">miftahulhdd</a>
+
+        <div class="d-none d-md-block mx-auto">
+          <span
+            class="text-muted fw-medium text-uppercase small tracking-widest"
+            >Laboratory Report</span
+          >
+        </div>
+
+        <div class="navbar-nav ms-auto ms-md-0 fw-semibold">
+          <a class="nav-link mx-1" href="../index.html">Home</a>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- main content start -->
+    <main class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-11">
+          <div class="report-container">
+            <!-- back button -->
+            <a href="../portofolio.html" class="back-btn">
+              <i class="bi bi-arrow-left"></i> Kembali ke Portofolio
+            </a>
+
+            <!-- badge -->
+            <div class="mb-2">
+              <span class="course-badge">Mobile App</span>
+            </div>
+
+            <!-- date -->
+            <div class="publish-date">Published on: 4 Oktober 2026</div>
+
+            <!-- title -->
+            <h1 class="article-title">
+              Laporan Praktikum 4: Navigasi &amp; Passing Data (Navigator,
+              Konsep Stack, dan Constructor)
+            </h1>
+
+            <!-- pendahuluan -->
+            <section>
+              <h2 class="section-title">Pendahuluan</h2>
+              <p class="intro-text">
+                Praktikum ini bertujuan untuk menerapkan 'Navigator.push' guna
+                berpindah ke layar baru, menggunakan 'Navigator.pop' untuk
+                menutup layar setelah sebuah aksi selesai dilakukan, serta
+                mengirim data (String, int) antar layar melalui 'Constructor'.
+                <br />
+                <br />
+                Flutter mengelola perpindahan halaman menggunakan 'Navigator',
+                sebuah widget pengelola rute yang bekerja layaknya tumpukan
+                kartu (stack). Aksi 'push' meletakkan halaman baru di tumpukan
+                teratas, sedangkan aksi 'pop' menghapus/menutup halaman teratas
+                untuk kembali ke halaman sebelumnya. Untuk mengirim data dari
+                satu halaman ke halaman lain, halaman tujuan perlu menyiapkan
+                variabel 'final' sebagai penampung data serta 'Constructor'
+                dengan parameter bertanda 'required'.
+              </p>
+              <a
+                class="link-text"
+                href="https://github.com/miftahulhdd/PrakAppMob_B_2411533005"
+                target="_blank"
+                >Repository Github</a
+              >
+
+              <div class="list-group list-group-custom">
+                <div class="list-group-item">
+                  <strong>Navigator:</strong> Widget pengelola rute (halaman)
+                  yang bekerja seperti tumpukan kartu.
+                </div>
+                <div class="list-group-item">
+                  <strong>Push (Maju):</strong> Meletakkan halaman baru di
+                  tumpukan teratas melalui 'Navigator.push'.
+                </div>
+                <div class="list-group-item">
+                  <strong>Pop (Mundur):</strong> Menghapus/menutup halaman
+                  teratas untuk kembali melalui 'Navigator.pop'.
+                </div>
+                <div class="list-group-item">
+                  <strong>Constructor &amp; Passing Data:</strong> Variabel
+                  'final' sebagai tempat penampung data, dan 'required' sebagai
+                  penanda bahwa data tersebut wajib diisi saat berpindah layar.
+                </div>
+              </div>
+            </section>
+
+            <!-- langkah kerja -->
+            <section>
+              <h2 class="section-title">Langkah Kerja</h2>
+
+              <div class="step-item">
+                <span class="step-number"
+                  >1. Membuat Halaman Detail Transaksi</span
+                >
+                <p class="step-description">
+                  Membuat file baru bernama 'transaction_detail_screen.dart'
+                  berisi class 'TransactionDetailScreen' yang meng-extend
+                  'StatelessWidget'. Disiapkan dua variabel penerima parameter,
+                  yaitu 'title' dan 'amount', yang dideklarasikan sebagai 'final
+                  String'. Kedua data tersebut wajib diserahkan dari layar
+                  sebelumnya melalui 'Constructor' dengan penanda 'required',
+                  lalu ditampilkan pada UI menggunakan widget 'Text' di dalam
+                  'Column'.
+                </p>
+                <div class="screenshot-group">
+                  <img
+                    src="../ss/appmob/4lkh1.png"
+                    alt="placeholder-modul4-langkah1"
+                  />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number"
+                  >2. Pindah ke Detail &amp; Mengirim Data (Push)</span
+                >
+                <p class="step-description">
+                  Kembali ke halaman Dashboard. Pada widget 'ListTile' daftar
+                  transaksi, ditambahkan fungsi 'onTap' yang memanggil
+                  'Navigator.push' dengan 'MaterialPageRoute'. Di dalam
+                  'builder', dibuat instance 'TransactionDetailScreen' dengan
+                  mengisi parameter 'title' dan 'amount' sesuai data baris
+                  transaksi yang diklik, sehingga data tersebut terkirim dan
+                  tampil pada halaman detail.
+                </p>
+                <div class="screenshot-group">
+                  <img
+                    src="../ss/appmob/4lkh2.png"
+                    alt="placeholder-modul4-langkah2"
+                  />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number"
+                  >3. Menutup Layar / Kembali Otomatis (Pop)</span
+                >
+                <p class="step-description">
+                  Kembali ke file 'add_transaction_screen.dart' (Modul 3).
+                  Setelah validasi formulir berhasil dan notifikasi 'SnackBar'
+                  ditampilkan, dipanggil 'Navigator.pop(context)' pada
+                  'onPressed' tombol "Simpan Transaksi" agar formulir otomatis
+                  tertutup dan kembali ke halaman Dashboard setelah transaksi
+                  berhasil disimpan.
+                </p>
+                <div class="screenshot-group">
+                  <img
+                    src="../ss/appmob/4lkh3.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">4. Hasil Akhir</span>
+                <p class="step-description">
+                  Daftar transaksi pada Dashboard kini dapat diklik dan akan
+                  membuka halaman detail yang berisi data lengkap. Tombol "Panah
+                  Kiri" otomatis muncul di 'AppBar' berkat 'Navigator.push',
+                  sedangkan teks judul dan nominal menyesuaikan dengan baris
+                  transaksi yang diklik sebelumnya. Struktur proyek pada modul
+                  ini dibagi menjadi empat file terpisah ('main.dart',
+                  'dashboard_screen.dart', 'add_transaction_screen.dart', dan
+                  'transaction_detail_screen.dart') agar rapi.
+                </p>
+                <div class="screenshot-group">
+                  <img
+                    src="../ss/appmob/4lkh4.png"
+                    alt="placeholder-modul4-hasil-akhir"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh5.png"
+                    alt="placeholder-modul4-hasil-akhir"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh6.png"
+                    alt="placeholder-modul4-hasil-akhir"
+                  />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">5. Full Code</span>
+                <p class="step-description">
+                  Berikut Saya lampirkan kode lengkap untuk setiap file yang
+                  telah dibuat.
+                </p>
+                <div class="screenshot-group">
+                  <img
+                    src="../ss/appmob/4lkh7.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh8.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh9.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh10.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh11.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh12.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh13.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh14.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                </div>
+              </div>
+
+              <div class="step-item">
+                <span class="step-number">6. Latihan</span>
+                <p class="step-description">
+                  Menambahkan input tanggal disaat menambah transaksi. Dan
+                  membuat field tersebut wajib diisi.
+                </p>
+                <div class="screenshot-group">
+                  <img
+                    src="../ss/appmob/4lkh15.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh16.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh17.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                  <img
+                    src="../ss/appmob/4lkh18.png"
+                    alt="placeholder-modul4-langkah3"
+                  />
+                </div>
+              </div>
+            </section>
+            <div class="report-internal-footer">
+              <hr />
+              <div class="copyright text-muted">
+                &copy;2026 miftahulhdd. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main content end -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
